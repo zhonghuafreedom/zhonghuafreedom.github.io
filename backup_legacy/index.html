@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>中華自由陣線 | Chinese Liberty Front</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>中華自由陣線</h1>
+        <h2>Chinese Liberty Front</h2>
+        <nav>
+            <a href="index.html">首頁 / Home</a>
+            <a href="about.html">關於我們 / About</a>
+            <a href="reports.html">人權報告 / Reports</a>
+            <a href="contact.html">聯絡我們 / Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h3>使命宣言 / Mission</h3>
+        <p>我們致力於揭露中共的暴政，守護人權與自由。</p>
+        <p>We are committed to exposing the tyranny of the CCP and defending human rights and liberty.</p>
+
+        <h3>最新文章 / Latest Posts</h3>
+        <ul id="post-list"></ul>
+    </main>
+    <footer>
+        <p>© 2025 中華自由陣線 | Chinese Liberty Front</p>
+    </footer>
+
+    <script>
+        const postList = document.getElementById("post-list");
+        const posts = [
+            {
+                title: "關於中國人權",
+                url: "posts/post1.html",
+                date: "2025-05-03"
+            },
+            {
+                title: "中國自由的道路",
+                url: "posts/post2.html",
+                date: "2025-05-04"
+            }
+        ];
+
+        posts.forEach(post => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${post.url}">${post.title} - <small>${post.date}</small></a>`;
+            postList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
