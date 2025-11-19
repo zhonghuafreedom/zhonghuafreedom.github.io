@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025-01-15",
             excerpt_zh: "本報告詳細記錄了過去一年中，中國在言論自由、網絡審查以及少數民族權益方面的倒退...",
             excerpt_en: "This report details the regression in freedom of speech, internet censorship, and minority rights in China over the past year...",
-            url: "#"
+            url: "posts/2024-report.html"
         },
         {
             title_zh: "數字監控與隱私權的終結",
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2024-12-10",
             excerpt_zh: "隨著面部識別和社會信用體系的全面推廣，普通公民的隱私空間正在被極度壓縮...",
             excerpt_en: "With the comprehensive promotion of facial recognition and the social credit system, the privacy of ordinary citizens is being severely compressed...",
-            url: "#"
+            url: "posts/digital-surveillance.html"
         }
     ];
 
