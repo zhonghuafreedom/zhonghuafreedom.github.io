@@ -59,6 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportsGrid = document.getElementById('reports-grid');
     const reports = [
         {
+            title_zh: "香港國安法與自由的淪陷",
+            title_en: "The Hong Kong National Security Law and the Fall of Freedom",
+            date: "2020-06-30",
+            excerpt_zh: "2020年6月30日，《港區國安法》深夜強推上路，東方之珠的法治、新聞自由與公民社會走向終結，「一國兩制」名存實亡。",
+            excerpt_en: "On June 30, 2020, Beijing forced the National Security Law upon Hong Kong, ending the rule of law, press freedom, and civil society—and effectively killing 'One Country, Two Systems'.",
+            url: "posts/hong-kong-nsl.html"
+        },
+        {
+            title_zh: "上海封城：清零政策下的人道災難",
+            title_en: "Shanghai Lockdown: A Humanitarian Disaster Under Zero-COVID",
+            date: "2022-04-01",
+            excerpt_zh: "2022年春，兩千五百萬上海市民被強制封控兩個多月，飢餓、次生死亡、暴力執法與被消音的反抗者，揭示了清零政策的真相。",
+            excerpt_en: "In spring 2022, 25 million Shanghai residents were locked down for over two months. Starvation, secondary deaths, violent enforcement and silenced resistance revealed the true face of Zero-COVID.",
+            url: "posts/shanghai-lockdown.html"
+        },
+        {
+            title_zh: "李文亮醫生：被消音的吹哨人",
+            title_en: "Dr. Li Wenliang: The Whistleblower They Silenced",
+            date: "2020-02-07",
+            excerpt_zh: "率先示警新冠病毒的眼科醫師李文亮被警方訓誡為「造謠者」，最終感染殉職，成為中國言論自由的悲劇象徵。",
+            excerpt_en: "Ophthalmologist Li Wenliang was reprimanded by police as a 'rumormonger' for first warning of COVID-19. He died after contracting the virus, becoming a tragic symbol of suppressed speech in China.",
+            url: "posts/li-wenliang.html"
+        },
+        {
             title_zh: "白紙運動：對抗清零政策的吶喊",
             title_en: "White Paper Movement: The Outcry Against Zero-COVID",
             date: "2022-11-26",
@@ -109,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     if (reportsGrid) {
+        reports.sort((a, b) => new Date(b.date) - new Date(a.date));
         reports.forEach(report => {
             const card = document.createElement('div');
             card.className = 'report-card';
