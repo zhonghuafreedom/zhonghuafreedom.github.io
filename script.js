@@ -59,6 +59,78 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportsGrid = document.getElementById('reports-grid');
     const reports = [
         {
+            title_zh: "劉霞：詩人、囚徒、亡夫之妻",
+            title_en: "Liu Xia: Poet, Prisoner, Widow of a Laureate",
+            date: "2010-10-08",
+            excerpt_zh: "諾貝爾和平獎得主劉曉波之妻劉霞，在丈夫獲獎後遭非法軟禁長達八年，她的詩與沉默成為中國良知的另一種記錄。",
+            excerpt_en: "After her husband Liu Xiaobo was awarded the Nobel Peace Prize, poet Liu Xia was placed under illegal house arrest for nearly eight years. Her silence and verse became another testament to China's conscience.",
+            url: "posts/liu-xia.html"
+        },
+        {
+            title_zh: "艾未未：藝術作為抵抗",
+            title_en: "Ai Weiwei: Art as Resistance",
+            date: "2011-04-03",
+            excerpt_zh: "從汶川遇難學生姓名牆到 81 天秘密拘留，艾未未用藝術揭露國家暴力，成為中共最知名的異議者之一。",
+            excerpt_en: "From the Sichuan earthquake students' name wall to his 81-day secret detention, Ai Weiwei has used art to expose state violence, becoming one of the CCP's most renowned dissidents.",
+            url: "posts/ai-weiwei.html"
+        },
+        {
+            title_zh: "王全璋律師：709事件中失蹤的良知",
+            title_en: "Lawyer Wang Quanzhang: A Conscience Disappeared in the 709 Crackdown",
+            date: "2019-01-28",
+            excerpt_zh: "709大抓捕中被秘密羈押逾三年的王全璋律師，是中國法治崩壞與「指定居所監視居住」制度的象徵。",
+            excerpt_en: "Held incommunicado for over three years after the 709 Crackdown, lawyer Wang Quanzhang has come to symbolize China's collapsing rule of law and the abuse of 'Residential Surveillance at a Designated Location'.",
+            url: "posts/wang-quanzhang.html"
+        },
+        {
+            title_zh: "王炳章：被綁架的中國民運先驅",
+            title_en: "Wang Bingzhang: The Kidnapped Founder of China's Overseas Democracy Movement",
+            date: "2003-02-10",
+            excerpt_zh: "海外中國民運奠基人王炳章2002年於越中邊境被綁架回中國，被秘密判處無期徒刑，至今仍在獄中。",
+            excerpt_en: "Wang Bingzhang, founder of the overseas Chinese democracy movement, was kidnapped from the Vietnam-China border in 2002 and secretly sentenced to life imprisonment. He remains in prison today.",
+            url: "posts/wang-bingzhang.html"
+        },
+        {
+            title_zh: "陳光誠：盲人維權者的逃亡",
+            title_en: "Chen Guangcheng: The Blind Activist Who Escaped",
+            date: "2012-04-22",
+            excerpt_zh: "盲人維權律師陳光誠揭發山東計劃生育暴力，遭4年監禁與7年軟禁，2012年戲劇性翻牆逃入美國駐華大使館。",
+            excerpt_en: "Blind legal advocate Chen Guangcheng exposed the violence of family planning in Shandong. After 4 years in prison and 7 years of house arrest, he made a dramatic 2012 escape into the US Embassy in Beijing.",
+            url: "posts/chen-guangcheng.html"
+        },
+        {
+            title_zh: "銅鑼灣書店事件：跨境綁架的開端",
+            title_en: "Causeway Bay Books: The Opening Act of Cross-Border Abduction",
+            date: "2015-10-15",
+            excerpt_zh: "2015年香港銅鑼灣書店五名股東與員工先後在港、深、泰失蹤，後出現於中國電視認罪，揭開中共跨境鎮壓序幕。",
+            excerpt_en: "In 2015, five shareholders and staff of Hong Kong's Causeway Bay Books vanished from Hong Kong, Shenzhen, and Thailand—later appearing in televised confessions on Chinese state TV, opening Beijing's era of cross-border abduction.",
+            url: "posts/causeway-bay-books.html"
+        },
+        {
+            title_zh: "江天勇律師：被酷刑與直播認罪的維權者",
+            title_en: "Lawyer Jiang Tianyong: Tortured and Forced into a Televised Confession",
+            date: "2017-11-21",
+            excerpt_zh: "維權律師江天勇在 709 案後仍堅持為被捕同行家屬奔走，2017 年被秘密審判並被迫電視認罪，揭露中國司法的黑箱。",
+            excerpt_en: "Rights lawyer Jiang Tianyong continued to support families of detained 709 colleagues. In 2017 he was tried in secret and forced into a televised confession, exposing the black box of China's justice system.",
+            url: "posts/jiang-tianyong.html"
+        },
+        {
+            title_zh: "香港 47 人案：戰後最大規模政治審判",
+            title_en: "The Hong Kong 47: The Largest Political Trial Since World War II",
+            date: "2024-11-19",
+            excerpt_zh: "2021 年 47 名香港民主派人士因參與初選被以「串謀顛覆」起訴，2024 年被判 4 至 10 年，創下香港殖民後最大規模政治審判。",
+            excerpt_en: "In 2021, 47 Hong Kong democrats were charged with 'conspiracy to subvert' for taking part in a primary election. Sentenced in 2024 to between 4 and 10 years, theirs is the largest political trial in post-handover Hong Kong.",
+            url: "posts/hk-47.html"
+        },
+        {
+            title_zh: "廣州十二人案：偷渡海上的香港抗爭者",
+            title_en: "The Hong Kong 12: Protesters Caught at Sea",
+            date: "2020-12-30",
+            excerpt_zh: "2020 年 12 名香港青年乘船赴台途中被中國海警截獲，秘密拘押於深圳鹽田，揭示跨境政治迫害的真實面貌。",
+            excerpt_en: "In 2020, twelve young Hongkongers fleeing by speedboat to Taiwan were intercepted at sea by China Coast Guard and secretly held at Yantian, Shenzhen—exposing the reality of cross-border political persecution.",
+            url: "posts/hk-12.html"
+        },
+        {
             title_zh: "豐縣「鐵鏈女」事件：被遺忘的拐賣婦女",
             title_en: "The 'Chained Woman' of Feng County: Trafficked Women China Forgot",
             date: "2022-01-28",
