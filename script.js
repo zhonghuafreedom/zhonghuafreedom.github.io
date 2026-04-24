@@ -59,6 +59,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportsGrid = document.getElementById('reports-grid');
     const reports = [
         {
+            title_zh: "豐縣「鐵鏈女」事件：被遺忘的拐賣婦女",
+            title_en: "The 'Chained Woman' of Feng County: Trafficked Women China Forgot",
+            date: "2022-01-28",
+            excerpt_zh: "2022年江蘇豐縣一名婦女被鐵鏈鎖頸、生育八孩的影片震驚全國，揭開長期被遮蔽的拐賣黑幕與制度性失職。",
+            excerpt_en: "In 2022, a video of a woman chained by the neck in Feng County, Jiangsu—mother of eight—shook the nation, exposing decades of hidden trafficking and systemic neglect.",
+            url: "posts/feng-county-chained-woman.html"
+        },
+        {
+            title_zh: "新疆再教育營：21世紀的種族滅絕",
+            title_en: "Xinjiang Re-education Camps: A 21st-Century Genocide",
+            date: "2017-04-01",
+            excerpt_zh: "百萬維吾爾人被秘密關押、強制勞動、強制絕育。多國政府與聯合國報告認定，這可能構成反人類罪甚至種族滅絕。",
+            excerpt_en: "Over a million Uyghurs have been secretly detained, forced into labor, and forcibly sterilized. Governments and a UN report conclude this may amount to crimes against humanity, even genocide.",
+            url: "posts/xinjiang-camps.html"
+        },
+        {
+            title_zh: "劉曉波與《零八憲章》：未死的良知",
+            title_en: "Liu Xiaobo and Charter 08: A Conscience That Refused to Die",
+            date: "2017-07-13",
+            excerpt_zh: "諾貝爾和平獎得主劉曉波因起草《零八憲章》被判11年重刑，最終病逝獄中——他留下的「我沒有敵人」至今迴盪。",
+            excerpt_en: "Nobel Peace laureate Liu Xiaobo was sentenced to 11 years for co-authoring Charter 08 and died in custody. His final words, 'I have no enemies,' still resonate today.",
+            url: "posts/liu-xiaobo.html"
+        },
+        {
+            title_zh: "達賴喇嘛流亡與西藏抗暴",
+            title_en: "The Dalai Lama in Exile and the Tibetan Uprising",
+            date: "1959-03-10",
+            excerpt_zh: "1959年拉薩抗暴遭血腥鎮壓，年輕的達賴喇嘛流亡印度，開啟逾六十年的西藏苦難史與精神抵抗。",
+            excerpt_en: "The 1959 Lhasa Uprising was crushed in blood, forcing the young Dalai Lama into exile in India and beginning over six decades of Tibetan suffering and spiritual resistance.",
+            url: "posts/dalai-lama-exile.html"
+        },
+        {
             title_zh: "香港國安法與自由的淪陷",
             title_en: "The Hong Kong National Security Law and the Fall of Freedom",
             date: "2020-06-30",
