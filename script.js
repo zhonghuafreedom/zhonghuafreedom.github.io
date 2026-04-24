@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title_zh: "銅鑼灣書店事件：跨境綁架的開端",
             title_en: "Causeway Bay Books: The Opening Act of Cross-Border Abduction",
-            date: "2015-10-15",
+            date: "2015-10-14",
             excerpt_zh: "2015年香港銅鑼灣書店五名股東與員工先後在港、深、泰失蹤，後出現於中國電視認罪，揭開中共跨境鎮壓序幕。",
             excerpt_en: "In 2015, five shareholders and staff of Hong Kong's Causeway Bay Books vanished from Hong Kong, Shenzhen, and Thailand—later appearing in televised confessions on Chinese state TV, opening Beijing's era of cross-border abduction.",
             url: "posts/causeway-bay-books.html"
