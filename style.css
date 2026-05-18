@@ -595,12 +595,30 @@ a.timeline-link:focus::after {
 }
 
 /* Language Toggling */
-body[data-lang="zh"] .lang-en {
+.lang-zh,
+.lang-en,
+.lang-ja,
+.lang-ko,
+.lang-es,
+.lang-de,
+.lang-fr,
+.lang-no,
+.lang-nl,
+.lang-it {
     display: none !important;
 }
 
-body[data-lang="en"] .lang-zh {
-    display: none !important;
+body[data-lang="zh"] .lang-zh,
+body[data-lang="en"] .lang-en,
+body[data-lang="ja"] .lang-ja,
+body[data-lang="ko"] .lang-ko,
+body[data-lang="es"] .lang-es,
+body[data-lang="de"] .lang-de,
+body[data-lang="fr"] .lang-fr,
+body[data-lang="no"] .lang-no,
+body[data-lang="nl"] .lang-nl,
+body[data-lang="it"] .lang-it {
+    display: revert !important;
 }
 
 /* Language Switcher Button */
@@ -614,6 +632,7 @@ body[data-lang="en"] .lang-zh {
     font-size: 0.9rem;
     margin-left: 20px;
     transition: var(--transition);
+    max-width: 150px;
 }
 
 .lang-switch-btn:hover {

@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Language Toggle Logic
-    const langToggleBtn = document.getElementById('lang-toggle');
-    const body = document.body;
-
-    // Check local storage or default to 'zh'
-    const currentLang = localStorage.getItem('lang') || 'zh';
-    setLanguage(currentLang);
-
-    langToggleBtn.addEventListener('click', () => {
-        const newLang = body.getAttribute('data-lang') === 'zh' ? 'en' : 'zh';
-        setLanguage(newLang);
-    });
-
-    function setLanguage(lang) {
-        body.setAttribute('data-lang', lang);
-        localStorage.setItem('lang', lang);
-
-        // Update button text
-        langToggleBtn.textContent = lang === 'zh' ? 'EN / 中' : '中 / EN';
-    }
-
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.main-nav');
@@ -64,6 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2010-10-08",
             excerpt_zh: "諾貝爾和平獎得主劉曉波之妻劉霞，在丈夫獲獎後遭非法軟禁長達八年，她的詩與沉默成為中國良知的另一種記錄。",
             excerpt_en: "After her husband Liu Xiaobo was awarded the Nobel Peace Prize, poet Liu Xia was placed under illegal house arrest for nearly eight years. Her silence and verse became another testament to China's conscience.",
+            title_ja: "劉霞：詩人、囚人、受賞者の未亡人",
+            excerpt_ja: "夫の劉暁波氏がノーベル平和賞を受賞した後、詩人の劉霞氏は8年近くも不法な自宅軟禁下に置かれていた。彼女の沈黙と詩は、中国の良心の新たな証しとなった。",
+            title_ko: "유샤: 시인, 죄수, 계관자의 과부",
+            excerpt_ko: "남편 류샤오보(Liu Xiaobo)가 노벨 평화상을 수상한 후, 시인 류샤(Liu Xia)는 거의 8년 동안 불법 가택연금을 당했습니다. 그녀의 침묵과 시는 중국의 양심에 대한 또 하나의 증거가 되었습니다.",
+            title_es: "Liu Xia: poeta, prisionera, viuda de un laureado",
+            excerpt_es: "Después de que su marido Liu Xiaobo recibiera el Premio Nobel de la Paz, la poeta Liu Xia fue puesta bajo arresto domiciliario ilegal durante casi ocho años. Su silencio y sus versos se convirtieron en otro testimonio de la conciencia de China.",
+            title_de: "Liu Xia: Dichterin, Gefangene, Witwe eines Preisträgers",
+            excerpt_de: "Nachdem ihr Mann Liu Xiaobo den Friedensnobelpreis erhalten hatte, wurde die Dichterin Liu Xia für fast acht Jahre unter illegalen Hausarrest gestellt. Ihr Schweigen und ihre Verse wurden zu einem weiteren Beweis für das Gewissen Chinas.",
+            title_fr: "Liu Xia : poète, prisonnière, veuve d'un lauréat",
+            excerpt_fr: "Après que son mari Liu Xiaobo ait reçu le prix Nobel de la paix, la poète Liu Xia a été assignée à résidence illégalement pendant près de huit ans. Son silence et ses vers sont devenus un autre témoignage de la conscience chinoise.",
+            title_no: "Liu Xia: Poet, fange, enke etter en prisvinner",
+            excerpt_no: "Etter at ektemannen Liu Xiaobo ble tildelt Nobels fredspris, ble poeten Liu Xia satt i ulovlig husarrest i nesten åtte år. Hennes stillhet og vers ble nok et bevis på Kinas samvittighet.",
+            title_nl: "Liu Xia: dichter, gevangene, weduwe van een laureaat",
+            excerpt_nl: "Nadat haar man Liu Xiaobo de Nobelprijs voor de Vrede kreeg, kreeg dichter Liu Xia bijna acht jaar lang illegaal huisarrest. Haar stilte en vers werden een nieuw bewijs van het Chinese geweten.",
+            title_it: "Liu Xia: poeta, prigioniero, vedova di un laureato",
+            excerpt_it: "Dopo che suo marito Liu Xiaobo ha ricevuto il Premio Nobel per la pace, la poetessa Liu Xia è stata messa agli arresti domiciliari illegali per quasi otto anni. Il suo silenzio e i suoi versi sono diventati un'altra testimonianza della coscienza cinese.",
             url: "posts/liu-xia.html"
         },
         {
@@ -72,6 +67,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2011-04-03",
             excerpt_zh: "從汶川遇難學生姓名牆到 81 天秘密拘留，艾未未用藝術揭露國家暴力，成為中共最知名的異議者之一。",
             excerpt_en: "From the Sichuan earthquake students' name wall to his 81-day secret detention, Ai Weiwei has used art to expose state violence, becoming one of the CCP's most renowned dissidents.",
+            title_ja: "アイ・ウェイウェイ：抵抗としての芸術",
+            excerpt_ja: "四川大地震の学生の名の壁から81日間の秘密拘留に至るまで、アイ・ウェイウェイは芸術を使って国家暴力を暴露し、中国共産党で最も有名な反体制派の一人となった。",
+            title_ko: "아이 웨이웨이: 저항으로서의 예술",
+            excerpt_ko: "쓰촨성 지진 학생들의 이름 벽부터 81일간의 비밀 구금까지 아이웨이웨이는 예술을 이용해 국가 폭력을 폭로했으며 중국 공산당의 가장 유명한 반체제 인사 중 한 명이 되었습니다.",
+            title_es: "Ai Weiwei: el arte como resistencia",
+            excerpt_es: "Desde el muro con los nombres de los estudiantes del terremoto de Sichuan hasta su detención secreta de 81 días, Ai Weiwei ha utilizado el arte para exponer la violencia estatal, convirtiéndose en uno de los disidentes más reconocidos del PCC.",
+            title_de: "Ai Weiwei: Kunst als Widerstand",
+            excerpt_de: "Von der Namenswand der Studenten nach dem Erdbeben in Sichuan bis zu seiner 81-tägigen geheimen Inhaftierung hat Ai Weiwei Kunst genutzt, um staatliche Gewalt aufzudecken, und wurde zu einem der bekanntesten Dissidenten der KPCh.",
+            title_fr: "Ai Weiwei : L’art comme résistance",
+            excerpt_fr: "Depuis le mur des noms des étudiants lors du tremblement de terre du Sichuan jusqu'à sa détention secrète de 81 jours, Ai Weiwei a utilisé l'art pour dénoncer la violence d'État, devenant ainsi l'un des dissidents les plus célèbres du PCC.",
+            title_no: "Ai Weiwei: Kunst som motstand",
+            excerpt_no: "Fra jordskjelvstudentenes navnevegg i Sichuan til hans 81-dagers hemmelige internering, har Ai Weiwei brukt kunst for å avsløre statsvold, og har blitt en av KKPs mest kjente dissidenter.",
+            title_nl: "Ai Weiwei: Kunst als verzet",
+            excerpt_nl: "Vanaf de naammuur van de studenten na de aardbeving in Sichuan tot aan zijn 81 dagen durende geheime detentie heeft Ai Weiwei kunst gebruikt om staatsgeweld aan de kaak te stellen en is hij een van de bekendste dissidenten van de CCP geworden.",
+            title_it: "Ai Weiwei: L'arte come resistenza",
+            excerpt_it: "Dal muro con i nomi degli studenti del terremoto del Sichuan ai suoi 81 giorni di detenzione segreta, Ai Weiwei ha usato l'arte per denunciare la violenza di stato, diventando uno dei dissidenti più famosi del PCC.",
             url: "posts/ai-weiwei.html"
         },
         {
@@ -80,6 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2019-01-28",
             excerpt_zh: "709大抓捕中被秘密羈押逾三年的王全璋律師，是中國法治崩壞與「指定居所監視居住」制度的象徵。",
             excerpt_en: "Held incommunicado for over three years after the 709 Crackdown, lawyer Wang Quanzhang has come to symbolize China's collapsing rule of law and the abuse of 'Residential Surveillance at a Designated Location'.",
+            title_ja: "王全章弁護士: 709の弾圧で消えた良心",
+            excerpt_ja: "709事件以来3年以上にわたり隔離された状態にある弁護士の王泉章氏は、中国の法治国家の崩壊と「指定場所での居住監視」の乱用を象徴する存在となっている。",
+            title_ko: "왕전장 변호사: 709 단속으로 사라진 양심",
+            excerpt_ko: "709단속 이후 3년 넘게 연락이 닿지 않는 변호사 왕취장(Wang Quanzhang)은 중국의 붕괴된 법치와 '지정장소 주민감시'의 남용을 상징하게 됐다.",
+            title_es: "Abogado Wang Quanzhang: Una conciencia desapareció en la represión 709",
+            excerpt_es: "Detenido incomunicado durante más de tres años después de la represión 709, el abogado Wang Quanzhang ha llegado a simbolizar el colapso del Estado de derecho en China y el abuso de la \"vigilancia residencial en un lugar designado\".",
+            title_de: "Anwalt Wang Quanzhang: Bei der Razzia im Jahr 709 verschwand ein Gewissen",
+            excerpt_de: "Der Anwalt Wang Quanzhang, der nach der Razzia im Jahr 709 mehr als drei Jahre lang ohne Kontakt zur Außenwelt festgehalten wurde, ist zum Symbol für den Zusammenbruch der Rechtsstaatlichkeit in China und den Missbrauch der „Wohnüberwachung an einem bestimmten Ort“ geworden.",
+            title_fr: "Avocat Wang Quanzhang : Une conscience a disparu lors de la répression du 709",
+            excerpt_fr: "Détenu au secret pendant plus de trois ans après la répression du 709, l'avocat Wang Quanzhang est devenu le symbole de l'effondrement de l'État de droit en Chine et de l'abus de la « surveillance résidentielle dans un lieu désigné ».",
+            title_no: "Advokat Wang Quanzhang: A Conscience forsvant i 709 Crackdown",
+            excerpt_no: "Advokaten Wang Quanzhang ble holdt incommunicado i over tre år etter 709-nedbruddet, og har kommet for å symbolisere Kinas kollapsende rettsstat og misbruket av \"boligovervåking på et utpekt sted\".",
+            title_nl: "Advocaat Wang Quanzhang: Een geweten verdween tijdens het harde optreden van 709",
+            excerpt_nl: "Advocaat Wang Quanzhang werd ruim drie jaar lang incommunicado vastgehouden na het harde optreden van 709 en is het symbool geworden van China's instortende rechtsstaat en het misbruik van 'residentieel toezicht op een aangewezen locatie'.",
+            title_it: "Avvocato Wang Quanzhang: una coscienza scomparsa nella repressione del 709",
+            excerpt_it: "Tenuto in incommunicado per oltre tre anni dopo la repressione del 709, l'avvocato Wang Quanzhang è diventato il simbolo del collasso dello stato di diritto cinese e dell'abuso della \"sorveglianza residenziale in un luogo designato\".",
             url: "posts/wang-quanzhang.html"
         },
         {
@@ -88,6 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2003-02-10",
             excerpt_zh: "海外中國民運奠基人王炳章2002年於越中邊境被綁架回中國，被秘密判處無期徒刑，至今仍在獄中。",
             excerpt_en: "Wang Bingzhang, founder of the overseas Chinese democracy movement, was kidnapped from the Vietnam-China border in 2002 and secretly sentenced to life imprisonment. He remains in prison today.",
+            title_ja: "王冰章：拉致された中国海外民主化運動の創始者",
+            excerpt_ja: "華僑民主運動の創設者である王炳章氏は、2002年にベトナムと中国の国境で誘拐され、極秘に終身刑を言い渡された。彼は今も刑務所にいます。",
+            title_ko: "왕빙장: 납치된 중국 해외 민주주의 운동의 창시자",
+            excerpt_ko: "화교 민주화 운동의 창시자인 왕빙장은 2002년 베트남-중국 국경에서 납치되어 비밀리에 종신형을 선고받았다. 그는 오늘도 감옥에 갇혀 있습니다.",
+            title_es: "Wang Bingzhang: el fundador secuestrado del movimiento chino por la democracia en el extranjero",
+            excerpt_es: "Wang Bingzhang, fundador del movimiento democrático chino en el extranjero, fue secuestrado en la frontera entre Vietnam y China en 2002 y sentenciado en secreto a cadena perpetua. Hoy permanece en prisión.",
+            title_de: "Wang Bingzhang: Der entführte Gründer der chinesischen Übersee-Demokratiebewegung",
+            excerpt_de: "Wang Bingzhang, Gründer der chinesischen Demokratiebewegung im Ausland, wurde 2002 an der vietnamesisch-chinesischen Grenze entführt und heimlich zu lebenslanger Haft verurteilt. Er bleibt heute im Gefängnis.",
+            title_fr: "Wang Bingzhang : le fondateur kidnappé du mouvement démocratique chinois à l'étranger",
+            excerpt_fr: "Wang Bingzhang, fondateur du mouvement démocratique chinois à l'étranger, a été kidnappé à la frontière entre le Vietnam et la Chine en 2002 et secrètement condamné à la prison à vie. Il est toujours en prison aujourd'hui.",
+            title_no: "Wang Bingzhang: Den kidnappede grunnleggeren av Kinas oversjøiske demokratibevegelse",
+            excerpt_no: "Wang Bingzhang, grunnlegger av den oversjøiske kinesiske demokratibevegelsen, ble kidnappet fra grensen mellom Vietnam og Kina i 2002 og i all hemmelighet dømt til livsvarig fengsel. Han sitter fortsatt i fengsel i dag.",
+            title_nl: "Wang Bingzhang: de ontvoerde oprichter van de Chinese overzeese democratiebeweging",
+            excerpt_nl: "Wang Bingzhang, oprichter van de overzeese Chinese democratiebeweging, werd in 2002 ontvoerd van de grens tussen Vietnam en China en in het geheim veroordeeld tot levenslange gevangenisstraf. Hij zit vandaag nog steeds in de gevangenis.",
+            title_it: "Wang Bingzhang: il fondatore rapito del movimento democratico cinese d'oltremare",
+            excerpt_it: "Wang Bingzhang, fondatore del movimento democratico cinese d'oltremare, è stato rapito al confine tra Vietnam e Cina nel 2002 e segretamente condannato all'ergastolo. Rimane in prigione oggi.",
             url: "posts/wang-bingzhang.html"
         },
         {
@@ -96,6 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2012-04-22",
             excerpt_zh: "盲人維權律師陳光誠揭發山東計劃生育暴力，遭4年監禁與7年軟禁，2012年戲劇性翻牆逃入美國駐華大使館。",
             excerpt_en: "Blind legal advocate Chen Guangcheng exposed the violence of family planning in Shandong. After 4 years in prison and 7 years of house arrest, he made a dramatic 2012 escape into the US Embassy in Beijing.",
+            title_ja: "チェン・グアンチェン：逃亡した盲目の活動家",
+            excerpt_ja: "盲目の法律擁護者チェン・グアンチェン氏は、山東省における家族計画の暴力を暴露した。 4年間の懲役と7年間の自宅軟禁を経て、2012年に北京の米国大使館へ劇的な逃亡を果たした。",
+            title_ko: "Chen Guangcheng: 탈출한 시각 장애인 활동가",
+            excerpt_ko: "시각 장애인 법률 옹호자 Chen Guangcheng은 산둥 지역의 가족 계획의 폭력성을 폭로했습니다. 그는 감옥에서 4년, 가택연금 7년을 보낸 뒤 2012년 극적인 베이징 주재 미국 대사관으로 탈출했다.",
+            title_es: "Chen Guangcheng: el activista ciego que escapó",
+            excerpt_es: "El defensor legal ciego Chen Guangcheng expuso la violencia de la planificación familiar en Shandong. Después de 4 años de prisión y 7 años de arresto domiciliario, en 2012 se escapó dramáticamente hacia la embajada de Estados Unidos en Beijing.",
+            title_de: "Chen Guangcheng: Der blinde Aktivist, der entkommen ist",
+            excerpt_de: "Der blinde Rechtsbeistand Chen Guangcheng deckte die Gewalt der Familienplanung in Shandong auf. Nach vier Jahren Gefängnis und sieben Jahren Hausarrest gelang ihm 2012 die dramatische Flucht in die US-Botschaft in Peking.",
+            title_fr: "Chen Guangcheng : le militant aveugle qui s'est échappé",
+            excerpt_fr: "L'avocat aveugle Chen Guangcheng a dénoncé la violence de la planification familiale dans le Shandong. Après 4 ans de prison et 7 ans d'assignation à résidence, il s'est évadé de façon spectaculaire en 2012 vers l'ambassade américaine à Pékin.",
+            title_no: "Chen Guangcheng: Den blinde aktivisten som rømte",
+            excerpt_no: "Den blinde juridiske advokaten Chen Guangcheng avslørte volden til familieplanlegging i Shandong. Etter 4 år i fengsel og 7 år med husarrest, foretok han en dramatisk flukt i 2012 til den amerikanske ambassaden i Beijing.",
+            title_nl: "Chen Guangcheng: de blinde activist die ontsnapte",
+            excerpt_nl: "De blinde advocaat Chen Guangcheng legde het geweld van gezinsplanning in Shandong bloot. Na vier jaar gevangenisstraf en zeven jaar huisarrest maakte hij in 2012 een dramatische ontsnapping naar de Amerikaanse ambassade in Peking.",
+            title_it: "Chen Guangcheng: l'attivista cieco che fuggì",
+            excerpt_it: "L'avvocato cieco Chen Guangcheng ha denunciato la violenza della pianificazione familiare nello Shandong. Dopo 4 anni di prigione e 7 anni di arresti domiciliari, nel 2012 è fuggito drammaticamente dall'ambasciata americana a Pechino.",
             url: "posts/chen-guangcheng.html"
         },
         {
@@ -104,6 +163,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2015-10-14",
             excerpt_zh: "2015年香港銅鑼灣書店五名股東與員工先後在港、深、泰失蹤，後出現於中國電視認罪，揭開中共跨境鎮壓序幕。",
             excerpt_en: "In 2015, five shareholders and staff of Hong Kong's Causeway Bay Books vanished from Hong Kong, Shenzhen, and Thailand—later appearing in televised confessions on Chinese state TV, opening Beijing's era of cross-border abduction.",
+            title_ja: "銅鑼湾書籍: 国境を越えた拉致の開幕法",
+            excerpt_ja: "2015年、香港の銅鑼湾書店の株主と従業員5人が香港、深セン、タイから失踪し、その後中国国営テレビで自白放送され、北京の国境を越えた拉致時代の幕開けとなった。",
+            title_ko: "코즈웨이 베이 도서: 국경간 납치 개시 행위",
+            excerpt_ko: "2015년에는 홍콩 코즈웨이베이 서점의 주주와 직원 5명이 홍콩, 선전, 태국에서 사라졌고, 이후 중국 국영 TV의 자백 방송에도 출연해 베이징의 국경간 납치 시대가 열렸습니다.",
+            title_es: "Libros de Causeway Bay: El acto inaugural de la abducción transfronteriza",
+            excerpt_es: "En 2015, cinco accionistas y personal de Causeway Bay Books de Hong Kong desaparecieron de Hong Kong, Shenzhen y Tailandia, apareciendo más tarde en confesiones televisadas en la televisión estatal china, abriendo la era de secuestros transfronterizos en Beijing.",
+            title_de: "Causeway Bay Books: Der Eröffnungsakt der grenzüberschreitenden Entführung",
+            excerpt_de: "Im Jahr 2015 verschwanden fünf Aktionäre und Mitarbeiter des Hongkonger Verlags Causeway Bay Books aus Hongkong, Shenzhen und Thailand – später traten sie in im Fernsehen übertragenen Geständnissen im chinesischen Staatsfernsehen auf und leiteten damit die Ära der grenzüberschreitenden Entführungen in Peking ein.",
+            title_fr: "Causeway Bay Books : L'acte d'ouverture des enlèvements transfrontaliers",
+            excerpt_fr: "En 2015, cinq actionnaires et employés de Causeway Bay Books à Hong Kong ont disparu de Hong Kong, de Shenzhen et de Thaïlande – apparaissant plus tard dans des confessions télévisées à la télévision d'État chinoise, ouvrant ainsi l'ère des enlèvements transfrontaliers à Pékin.",
+            title_no: "Causeway Bay Books: The Opening Act of Cross-Border Abduction",
+            excerpt_no: "I 2015 forsvant fem aksjonærer og ansatte i Hong Kongs Causeway Bay Books fra Hong Kong, Shenzhen og Thailand – senere dukket de opp i TV-tilståelser på kinesisk statlig TV, noe som åpnet Beijings æra med grenseoverskridende bortføring.",
+            title_nl: "Causeway Bay Books: de openingshandeling van grensoverschrijdende ontvoering",
+            excerpt_nl: "In 2015 verdwenen vijf aandeelhouders en medewerkers van Causeway Bay Books uit Hong Kong, Shenzhen en Thailand. Later verschenen ze in bekentenissen op de Chinese staatstelevisie, waarmee het tijdperk van Peking van grensoverschrijdende ontvoeringen werd geopend.",
+            title_it: "Libri di Causeway Bay: l'atto di apertura dei rapimenti transfrontalieri",
+            excerpt_it: "Nel 2015, cinque azionisti e personale della Causeway Bay Books di Hong Kong sono scomparsi da Hong Kong, Shenzhen e Thailandia, apparendo poi in confessioni televisive sulla TV di stato cinese, inaugurando l'era dei rapimenti transfrontalieri a Pechino.",
             url: "posts/causeway-bay-books.html"
         },
         {
@@ -112,6 +187,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2017-11-21",
             excerpt_zh: "維權律師江天勇在 709 案後仍堅持為被捕同行家屬奔走，2017 年被秘密審判並被迫電視認罪，揭露中國司法的黑箱。",
             excerpt_en: "Rights lawyer Jiang Tianyong continued to support families of detained 709 colleagues. In 2017 he was tried in secret and forced into a televised confession, exposing the black box of China's justice system.",
+            title_ja: "江天勇弁護士：拷問を受け、テレビで自白を強要",
+            excerpt_ja: "人権弁護士の江天勇氏は、拘束された709人の同僚の家族を支援し続けた。 2017年、彼は秘密裏に裁判を受け、テレビ放映された自白を強要され、中国の司法制度のブラックボックスが暴露された。",
+            title_ko: "장천용 변호사: 고문을 당하고 강제로 방송된 자백",
+            excerpt_ko: "인권변호사 장천용(Jiang Tianyong)은 구금된 동료 709명의 가족을 계속해서 지원했다. 2017년 그는 비밀 재판을 받고 TV에 중계돼 중국 사법 제도의 블랙박스를 폭로했다.",
+            title_es: "Abogado Jiang Tianyong: torturado y obligado a confesar por televisión",
+            excerpt_es: "El abogado de derechos humanos Jiang Tianyong siguió apoyando a las familias de 709 colegas detenidos. En 2017 fue juzgado en secreto y obligado a confesar por televisión, exponiendo la caja negra del sistema de justicia chino.",
+            title_de: "Anwalt Jiang Tianyong: Gefoltert und zu einem im Fernsehen übertragenen Geständnis gezwungen",
+            excerpt_de: "Der Rechtsanwalt Jiang Tianyong unterstützte weiterhin die Familien der inhaftierten 709 Kollegen. Im Jahr 2017 wurde er heimlich vor Gericht gestellt und zu einem im Fernsehen übertragenen Geständnis gezwungen, was die Black Box des chinesischen Justizsystems ans Licht brachte.",
+            title_fr: "L'avocat Jiang Tianyong : torturé et contraint à des aveux télévisés",
+            excerpt_fr: "L'avocat des droits de l'homme Jiang Tianyong a continué de soutenir les familles de 709 collègues détenus. En 2017, il a été jugé en secret et contraint à des aveux télévisés, révélant ainsi la boîte noire du système judiciaire chinois.",
+            title_no: "Advokat Jiang Tianyong: Torturert og tvunget til en TV-tilståelse",
+            excerpt_no: "Rettighetsadvokat Jiang Tianyong fortsatte å støtte familier til 709 internerte kolleger. I 2017 ble han stilt for retten i hemmelighet og tvunget til en TV-tilståelse, og avslørte den svarte boksen til Kinas rettssystem.",
+            title_nl: "Advocaat Jiang Tianyong: gemarteld en gedwongen tot een bekentenis op televisie",
+            excerpt_nl: "Rechtenadvocaat Jiang Tianyong bleef de families van gedetineerde 709 collega's steunen. In 2017 werd hij in het geheim berecht en gedwongen tot een bekentenis op televisie, waarmee hij de zwarte doos van het Chinese rechtssysteem blootlegde.",
+            title_it: "Avvocato Jiang Tianyong: torturato e costretto a confessare in televisione",
+            excerpt_it: "L'avvocato per i diritti umani Jiang Tianyong ha continuato a sostenere le famiglie dei 709 colleghi detenuti. Nel 2017 è stato processato in segreto e costretto a una confessione televisiva, esponendo la scatola nera del sistema giudiziario cinese.",
             url: "posts/jiang-tianyong.html"
         },
         {
@@ -120,6 +211,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2024-11-19",
             excerpt_zh: "2021 年 47 名香港民主派人士因參與初選被以「串謀顛覆」起訴，2024 年被判 4 至 10 年，創下香港殖民後最大規模政治審判。",
             excerpt_en: "In 2021, 47 Hong Kong democrats were charged with 'conspiracy to subvert' for taking part in a primary election. Sentenced in 2024 to between 4 and 10 years, theirs is the largest political trial in post-handover Hong Kong.",
+            title_ja: "香港47：第二次世界大戦以来最大の政治裁判",
+            excerpt_ja: "2021年、香港の民主派47人が予備選挙に参加したとして「転覆共謀」の罪で起訴された。 2024年に懲役4年から10年の判決が下されるこの裁判は、返還後の香港では最大の政治裁判となる。",
+            title_ko: "홍콩 47차: 제2차 세계대전 이후 최대 규모의 정치 재판",
+            excerpt_ko: "2021년에는 홍콩 민주당 의원 47명이 예비선거에 참여한 혐의로 '전복 음모' 혐의로 기소됐다. 2024년에 4~10년 형을 선고받은 이들의 재판은 홍콩 반환 이후 최대 규모의 정치 재판이다.",
+            title_es: "Los 47 de Hong Kong: el mayor juicio político desde la Segunda Guerra Mundial",
+            excerpt_es: "En 2021, 47 demócratas de Hong Kong fueron acusados ​​de “conspiración para subvertir” por participar en unas elecciones primarias. Condenado en 2024 a entre 4 y 10 años, el suyo es el juicio político más grande en Hong Kong posterior a la cesión.",
+            title_de: "Der Hong Kong 47: Der größte politische Prozess seit dem Zweiten Weltkrieg",
+            excerpt_de: "Im Jahr 2021 wurden 47 Hongkonger Demokraten wegen „Verschwörung zur Untergrabung“ angeklagt, weil sie an einer Vorwahl teilgenommen hatten. Im Jahr 2024 wurden sie zu Haftstrafen zwischen vier und zehn Jahren verurteilt. Es handelt sich um den größten politischen Prozess in Hongkong seit der Machtübergabe.",
+            title_fr: "Les 47 de Hong Kong : le plus grand procès politique depuis la Seconde Guerre mondiale",
+            excerpt_fr: "En 2021, 47 démocrates de Hong Kong ont été accusés de « complot en vue de subvertir » pour avoir participé à une élection primaire. Condamnés en 2024 à des peines de 4 à 10 ans de prison, il s'agit du plus grand procès politique jamais organisé à Hong Kong après la rétrocession.",
+            title_no: "Hong Kong 47: Den største politiske rettssaken siden andre verdenskrig",
+            excerpt_no: "I 2021 ble 47 Hong Kong-demokrater siktet for «konspirasjon for å undergrave» for å ha deltatt i et primærvalg. De ble dømt i 2024 til mellom 4 og 10 år, og deres er den største politiske rettssaken i Hong Kong etter overleveringen.",
+            title_nl: "De Hong Kong 47: het grootste politieke proces sinds de Tweede Wereldoorlog",
+            excerpt_nl: "In 2021 werden 47 democraten in Hongkong beschuldigd van ‘samenzwering om te ondermijnen’ omdat ze hadden deelgenomen aan voorverkiezingen. Ze werden in 2024 veroordeeld tot vier tot tien jaar gevangenisstraf en vormen het grootste politieke proces in Hong Kong na de overdracht.",
+            title_it: "Hong Kong 47: il più grande processo politico dalla seconda guerra mondiale",
+            excerpt_it: "Nel 2021, 47 democratici di Hong Kong sono stati accusati di “cospirazione sovvertita” per aver preso parte alle elezioni primarie. Condannato nel 2024 a una pena compresa tra 4 e 10 anni, il loro è il più grande processo politico nell'Hong Kong post-consegna.",
             url: "posts/hk-47.html"
         },
         {
@@ -128,6 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2020-12-30",
             excerpt_zh: "2020 年 12 名香港青年乘船赴台途中被中國海警截獲，秘密拘押於深圳鹽田，揭示跨境政治迫害的真實面貌。",
             excerpt_en: "In 2020, twelve young Hongkongers fleeing by speedboat to Taiwan were intercepted at sea by China Coast Guard and secretly held at Yantian, Shenzhen—exposing the reality of cross-border political persecution.",
+            title_ja: "香港12：デモ参加者が海で巻き込まれる",
+            excerpt_ja: "2020年、スピードボートで台湾へ逃亡していた12人の香港人の若者が海上で中国海警局に拿捕され、深セン市塩田で極秘に拘束された。国境を越えた政治的迫害の現実が白日の下にさらされた。",
+            title_ko: "홍콩 12: 해상에서 붙잡힌 시위대",
+            excerpt_ko: "2020년 쾌속정을 타고 대만으로 도주하던 홍콩 청년 12명이 바다에서 중국 해안경비대에 붙잡혀 선전 옌톈에 비밀리에 붙잡혀 국경을 넘는 정치적 박해의 현실을 폭로했다.",
+            title_es: "Los 12 de Hong Kong: Manifestantes atrapados en el mar",
+            excerpt_es: "En 2020, doce jóvenes de Hong Kong que huían en lancha rápida a Taiwán fueron interceptados en el mar por la Guardia Costera de China y retenidos en secreto en Yantian, Shenzhen, exponiendo la realidad de la persecución política transfronteriza.",
+            title_de: "Die Hong Kong 12: Demonstranten auf See gefangen",
+            excerpt_de: "Im Jahr 2020 wurden zwölf junge Hongkonger, die mit einem Schnellboot nach Taiwan flohen, auf See von der chinesischen Küstenwache abgefangen und heimlich in Yantian, Shenzhen, festgehalten – was die Realität der grenzüberschreitenden politischen Verfolgung ans Licht brachte.",
+            title_fr: "Les 12 de Hong Kong : des manifestants pris en mer",
+            excerpt_fr: "En 2020, douze jeunes Hongkongais fuyant en hors-bord vers Taïwan ont été interceptés en mer par les garde-côtes chinois et détenus secrètement à Yantian, Shenzhen – révélant ainsi la réalité de la persécution politique transfrontalière.",
+            title_no: "Hong Kong 12: Demonstranter fanget til sjøs",
+            excerpt_no: "I 2020 ble tolv unge Hongkongere som flyktet med hurtigbåt til Taiwan, fanget opp til sjøs av Kinas kystvakt og i hemmelighet holdt i Yantian, Shenzhen – noe som avslører virkeligheten av politisk forfølgelse over landegrensene.",
+            title_nl: "De Hong Kong 12: demonstranten gevangen op zee",
+            excerpt_nl: "In 2020 werden twaalf jonge Hongkongers die per speedboot naar Taiwan vluchtten op zee onderschept door de Chinese kustwacht en in het geheim vastgehouden in Yantian, Shenzhen, waardoor de realiteit van grensoverschrijdende politieke vervolging aan het licht kwam.",
+            title_it: "Hong Kong 12: manifestanti catturati in mare",
+            excerpt_it: "Nel 2020, dodici giovani hongkonghesi in fuga in motoscafo verso Taiwan sono stati intercettati in mare dalla guardia costiera cinese e trattenuti segretamente a Yantian, Shenzhen, esponendo la realtà della persecuzione politica transfrontaliera.",
             url: "posts/hk-12.html"
         },
         {
@@ -136,6 +259,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2022-01-28",
             excerpt_zh: "2022年江蘇豐縣一名婦女被鐵鏈鎖頸、生育八孩的影片震驚全國，揭開長期被遮蔽的拐賣黑幕與制度性失職。",
             excerpt_en: "In 2022, a video of a woman chained by the neck in Feng County, Jiangsu—mother of eight—shook the nation, exposing decades of hidden trafficking and systemic neglect.",
+            title_ja: "豊県の「鎖につながれた女性」：中国が忘れ去った人身売買された女性たち",
+            excerpt_ja: "2022年、江蘇省豊県で首を鎖でつながれた女性（8人の子供の母親）の動画は全国を震撼させ、数十年にわたる隠れた人身売買と組織的無視を暴露した。",
+            title_ko: "펑현의 '사슬에 묶인 여성': 중국에서 잊혀진 인신매매 여성",
+            excerpt_ko: "2022년에는 장쑤성 펑현에서 여덟 아이의 어머니가 목에 사슬로 묶인 여성의 영상이 전국을 뒤흔들어 수십 년간의 숨겨진 인신매매와 조직적 방치를 폭로했습니다.",
+            title_es: "La 'mujer encadenada' del condado de Feng: las mujeres víctimas de trata que China olvidó",
+            excerpt_es: "En 2022, un vídeo de una mujer encadenada por el cuello en el condado de Feng, Jiangsu, madre de ocho hijos, sacudió a la nación y expuso décadas de trata encubierta y negligencia sistémica.",
+            title_de: "Die „verkettete Frau“ des Kreises Feng: Von Menschenhandel betroffene Frauen, die China vergessen hat",
+            excerpt_de: "Im Jahr 2022 erschütterte ein Video einer Frau, die im Feng County, Jiangsu, am Hals gefesselt war – Mutter von acht Kindern – die Nation und enthüllte jahrzehntelangen versteckten Menschenhandel und systemische Vernachlässigung.",
+            title_fr: "La « femme enchaînée » du comté de Feng : les femmes victimes de trafic que la Chine a oubliées",
+            excerpt_fr: "En 2022, une vidéo d'une femme enchaînée par le cou dans le comté de Feng, Jiangsu – mère de huit enfants – a secoué la nation, révélant des décennies de trafic caché et de négligence systémique.",
+            title_no: "Den 'lenkede kvinnen' i Feng County: Traficked Women Kina glemte",
+            excerpt_no: "I 2022 rystet en video av en kvinne lenket i nakken i Feng County, Jiangsu-mor til åtte nasjonen, og avslørte tiår med skjult menneskehandel og systemisk omsorgssvikt.",
+            title_nl: "De 'geketende vrouw' van Feng County: verhandelde vrouwen die China vergeten is",
+            excerpt_nl: "In 2022 schudde een video van een vrouw die aan haar nek was vastgeketend in Feng County, Jiangsu, de moeder van acht, de natie, waardoor tientallen jaren van verborgen mensenhandel en systemische verwaarlozing aan het licht kwamen.",
+            title_it: "La “donna incatenata” della contea di Feng: le donne trafficate che la Cina ha dimenticato",
+            excerpt_it: "Nel 2022, il video di una donna incatenata al collo nella contea di Feng, Jiangsu, madre di otto figli, ha scosso la nazione, mettendo in luce decenni di traffici nascosti e di abbandono sistemico.",
             url: "posts/feng-county-chained-woman.html"
         },
         {
@@ -144,6 +283,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2017-04-01",
             excerpt_zh: "百萬維吾爾人被秘密關押、強制勞動、強制絕育。多國政府與聯合國報告認定，這可能構成反人類罪甚至種族滅絕。",
             excerpt_en: "Over a million Uyghurs have been secretly detained, forced into labor, and forcibly sterilized. Governments and a UN report conclude this may amount to crimes against humanity, even genocide.",
+            title_ja: "新疆の再教育キャンプ：21世紀の大量虐殺",
+            excerpt_ja: "100万人以上のウイグル人が秘密裏に拘束され、労働を強制され、強制的に不妊手術を受けている。各国政府と国連の報告書は、これは人道に対する罪、さらには大量虐殺に当たる可能性があると結論付けている。",
+            title_ko: "신장 재교육 수용소: 21세기 대량 학살",
+            excerpt_ko: "백만 명이 넘는 위구르인들이 비밀리에 구금되어 강제 노동을 당하고 강제 불임 처분을 받았습니다. 정부와 UN 보고서는 이것이 반인도적 범죄, 심지어 대량 학살에 해당할 수 있다고 결론지었습니다.",
+            title_es: "Campos de reeducación de Xinjiang: un genocidio del siglo XXI",
+            excerpt_es: "Más de un millón de uigures han sido detenidos en secreto, obligados a trabajar y esterilizados a la fuerza. Los gobiernos y un informe de la ONU concluyen que esto puede equivaler a crímenes contra la humanidad, incluso genocidio.",
+            title_de: "Umerziehungslager in Xinjiang: Ein Völkermord im 21. Jahrhundert",
+            excerpt_de: "Über eine Million Uiguren wurden heimlich inhaftiert, zur Arbeit gezwungen und zwangsweise sterilisiert. Regierungen und ein UN-Bericht kommen zu dem Schluss, dass dies Verbrechen gegen die Menschlichkeit, sogar Völkermord, darstellen könnte.",
+            title_fr: "Camps de rééducation du Xinjiang : un génocide du 21e siècle",
+            excerpt_fr: "Plus d’un million d’Ouïghours ont été détenus au secret, contraints au travail et stérilisés de force. Les gouvernements et un rapport de l'ONU concluent que cela pourrait constituer un crime contre l'humanité, voire un génocide.",
+            title_no: "Xinjiang Re-education Camps: Et folkemord fra det 21. århundre",
+            excerpt_no: "Over en million uigurer har blitt arrestert i hemmelighet, tvunget til fødsel og tvangssterilisert. Regjeringer og en FN-rapport konkluderer med at dette kan utgjøre forbrytelser mot menneskeheten, til og med folkemord.",
+            title_nl: "Xinjiang-heropvoedingskampen: een genocide in de 21e eeuw",
+            excerpt_nl: "Meer dan een miljoen Oeigoeren zijn in het geheim vastgehouden, tot arbeid gedwongen en onder dwang gesteriliseerd. Regeringen en een VN-rapport concluderen dat dit kan neerkomen op misdaden tegen de menselijkheid, zelfs op genocide.",
+            title_it: "Campi di rieducazione dello Xinjiang: un genocidio del 21° secolo",
+            excerpt_it: "Oltre un milione di uiguri sono stati segretamente detenuti, costretti al travaglio e sterilizzati con la forza. I governi e un rapporto delle Nazioni Unite concludono che ciò potrebbe equivalere a crimini contro l’umanità, persino a un genocidio.",
             url: "posts/xinjiang-camps.html"
         },
         {
@@ -152,6 +307,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2017-07-13",
             excerpt_zh: "諾貝爾和平獎得主劉曉波因起草《零八憲章》被判11年重刑，最終病逝獄中——他留下的「我沒有敵人」至今迴盪。",
             excerpt_en: "Nobel Peace laureate Liu Xiaobo was sentenced to 11 years for co-authoring Charter 08 and died in custody. His final words, 'I have no enemies,' still resonate today.",
+            title_ja: "劉暁波と憲章08：死ぬことを拒否した良心",
+            excerpt_ja: "ノーベル平和賞受賞者の劉暁波氏は憲章08の共同執筆者として懲役11年の判決を受け、拘留中に死亡した。 「私に敵はいない」という彼の最後の言葉は今でも心に残っています。",
+            title_ko: "류샤오보와 헌장 08: 죽기를 거부한 양심",
+            excerpt_ko: "노벨평화상 수상자 류샤오보(劉曉波)가 08헌장 공동저자로 징역 11년을 선고받고 구금 중 사망했다. '나에게는 적이 없다'는 그의 마지막 말은 오늘날에도 여전히 울려퍼진다.",
+            title_es: "Liu Xiaobo y la Carta 08: una conciencia que se negó a morir",
+            excerpt_es: "El premio Nobel de la Paz Liu Xiaobo fue sentenciado a 11 años por ser coautor de la Carta 08 y murió bajo custodia. Sus últimas palabras: \"No tengo enemigos\", todavía resuenan hoy.",
+            title_de: "Liu Xiaobo und Charta 08: Ein Gewissen, das sich weigerte zu sterben",
+            excerpt_de: "Der Friedensnobelpreisträger Liu Xiaobo wurde wegen Mitverfasser der Charta 08 zu elf Jahren Haft verurteilt und starb in der Haft. Seine letzten Worte „Ich habe keine Feinde“ haben noch heute Nachhall.",
+            title_fr: "Liu Xiaobo et la Charte 08 : Une conscience qui refuse de mourir",
+            excerpt_fr: "Le prix Nobel de la paix Liu Xiaobo a été condamné à 11 ans de prison pour avoir co-écrit la Charte 08 et est décédé en détention. Ses derniers mots, « Je n'ai pas d'ennemis », résonnent encore aujourd'hui.",
+            title_no: "Liu Xiaobo og Charter 08: En samvittighet som nektet å dø",
+            excerpt_no: "Nobels fredsprisvinner Liu Xiaobo ble dømt til 11 år for å være medforfatter av Charter 08 og døde i varetekt. Hans siste ord, 'Jeg har ingen fiender,' gir fortsatt gjenklang i dag.",
+            title_nl: "Liu Xiaobo en Charter 08: een geweten dat weigerde te sterven",
+            excerpt_nl: "Nobelprijswinnaar Liu Xiaobo werd veroordeeld tot elf jaar wegens co-auteur van Charter 08 en stierf in hechtenis. Zijn laatste woorden, 'Ik heb geen vijanden', weerklinken vandaag de dag nog steeds.",
+            title_it: "Liu Xiaobo e Carta 08: Una coscienza che si rifiutava di morire",
+            excerpt_it: "Il premio Nobel per la pace Liu Xiaobo è stato condannato a 11 anni per essere stato coautore di Carta 08 ed è morto in custodia. Le sue ultime parole, \"Non ho nemici\", risuonano ancora oggi.",
             url: "posts/liu-xiaobo.html"
         },
         {
@@ -160,6 +331,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "1959-03-10",
             excerpt_zh: "1959年拉薩抗暴遭血腥鎮壓，年輕的達賴喇嘛流亡印度，開啟逾六十年的西藏苦難史與精神抵抗。",
             excerpt_en: "The 1959 Lhasa Uprising was crushed in blood, forcing the young Dalai Lama into exile in India and beginning over six decades of Tibetan suffering and spiritual resistance.",
+            title_ja: "亡命ダライ・ラマとチベット蜂起",
+            excerpt_ja: "1959年のラサ蜂起は流血で鎮圧され、若きダライ・ラマはインド亡命を余儀なくされ、60年以上にわたるチベット人の苦しみと精神的な抵抗が始まった。",
+            title_ko: "망명중인 달라이 라마와 티베트 봉기",
+            excerpt_ko: "1959년 라사 봉기는 유혈 사태로 진압되어 젊은 달라이 라마가 인도로 망명하게 되었고 60년이 넘는 티베트인의 고통과 영적 저항이 시작되었습니다.",
+            title_es: "El Dalai Lama en el exilio y el levantamiento tibetano",
+            excerpt_es: "El levantamiento de Lhasa de 1959 fue aplastado con sangre, lo que obligó al joven Dalai Lama a exiliarse en la India y dio inicio a más de seis décadas de sufrimiento y resistencia espiritual tibetana.",
+            title_de: "Der Dalai Lama im Exil und der tibetische Aufstand",
+            excerpt_de: "Der Lhasa-Aufstand von 1959 wurde blutig niedergeschlagen, was den jungen Dalai Lama ins indische Exil zwang und über sechs Jahrzehnte tibetischen Leidens und spirituellen Widerstands auslöste.",
+            title_fr: "Le Dalaï Lama en exil et le soulèvement tibétain",
+            excerpt_fr: "Le soulèvement de Lhassa de 1959 a été écrasé dans le sang, forçant le jeune Dalaï Lama à s'exiler en Inde et marquant le début de plus de six décennies de souffrances et de résistance spirituelle pour les Tibétains.",
+            title_no: "Dalai Lama i eksil og det tibetanske opprøret",
+            excerpt_no: "Lhasa-opprøret i 1959 ble knust i blod, og tvang den unge Dalai Lama i eksil i India og startet over seks tiår med tibetansk lidelse og åndelig motstand.",
+            title_nl: "De Dalai Lama in ballingschap en de Tibetaanse opstand",
+            excerpt_nl: "De opstand in Lhasa van 1959 werd met bloed neergeslagen, waardoor de jonge Dalai Lama in ballingschap naar India werd gedwongen, wat het begin vormde van meer dan zes decennia van Tibetaans lijden en spiritueel verzet.",
+            title_it: "Il Dalai Lama in esilio e la rivolta tibetana",
+            excerpt_it: "La rivolta di Lhasa del 1959 fu repressa nel sangue, costringendo il giovane Dalai Lama all'esilio in India e dando inizio a oltre sessant'anni di sofferenza e resistenza spirituale tibetana.",
             url: "posts/dalai-lama-exile.html"
         },
         {
@@ -168,6 +355,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2020-06-30",
             excerpt_zh: "2020年6月30日，《港區國安法》深夜強推上路，東方之珠的法治、新聞自由與公民社會走向終結，「一國兩制」名存實亡。",
             excerpt_en: "On June 30, 2020, Beijing forced the National Security Law upon Hong Kong, ending the rule of law, press freedom, and civil society—and effectively killing 'One Country, Two Systems'.",
+            title_ja: "香港国家安全維持法と自由の崩壊",
+            excerpt_ja: "2020年6月30日、中国政府は香港に国家安全維持法を強行し、法の支配、報道の自由、市民社会を終わらせ、事実上「一国二制度」を消滅させた。",
+            title_ko: "홍콩 국가보안법과 자유의 몰락",
+            excerpt_ko: "2020년 6월 30일, 중국은 홍콩에 국가보안법을 강요하여 법치, 언론 자유, 시민 사회를 종식시키고 '일국양제'를 효과적으로 말살했습니다.",
+            title_es: "La Ley de Seguridad Nacional de Hong Kong y la caída de la libertad",
+            excerpt_es: "El 30 de junio de 2020, Beijing impuso la Ley de Seguridad Nacional en Hong Kong, poniendo fin al estado de derecho, la libertad de prensa y la sociedad civil, y acabando efectivamente con \"Un país, dos sistemas\".",
+            title_de: "Das nationale Sicherheitsgesetz Hongkongs und der Fall der Freiheit",
+            excerpt_de: "Am 30. Juni 2020 zwang Peking Hongkong das Nationale Sicherheitsgesetz auf, beendete damit die Rechtsstaatlichkeit, die Pressefreiheit und die Zivilgesellschaft – und tötete effektiv „Ein Land, zwei Systeme“.",
+            title_fr: "La loi sur la sécurité nationale de Hong Kong et la chute de la liberté",
+            excerpt_fr: "Le 30 juin 2020, Pékin a imposé à Hong Kong la loi sur la sécurité nationale, mettant fin à l’État de droit, à la liberté de la presse et à la société civile – et tuant ainsi le principe « Un pays, deux systèmes ».",
+            title_no: "Hong Kongs nasjonale sikkerhetslov og frihetens fall",
+            excerpt_no: "30. juni 2020 påtvunget Beijing den nasjonale sikkerhetsloven på Hong Kong, og avsluttet rettsstaten, pressefriheten og det sivile samfunn – og effektivt drepte «Ett land, to systemer».",
+            title_nl: "De nationale veiligheidswet van Hong Kong en de val van de vrijheid",
+            excerpt_nl: "Op 30 juni 2020 dwong Peking Hongkong de Nationale Veiligheidswet op, waardoor een einde kwam aan de rechtsstaat, de persvrijheid en het maatschappelijk middenveld, en in feite ‘Eén land, twee systemen’ werd gedood.",
+            title_it: "La legge sulla sicurezza nazionale di Hong Kong e la caduta della libertà",
+            excerpt_it: "Il 30 giugno 2020, Pechino ha imposto a Hong Kong la legge sulla sicurezza nazionale, ponendo fine allo stato di diritto, alla libertà di stampa e alla società civile e uccidendo di fatto il principio “Un Paese, due sistemi”.",
             url: "posts/hong-kong-nsl.html"
         },
         {
@@ -176,6 +379,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2022-04-01",
             excerpt_zh: "2022年春，兩千五百萬上海市民被強制封控兩個多月，飢餓、次生死亡、暴力執法與被消音的反抗者，揭示了清零政策的真相。",
             excerpt_en: "In spring 2022, 25 million Shanghai residents were locked down for over two months. Starvation, secondary deaths, violent enforcement and silenced resistance revealed the true face of Zero-COVID.",
+            title_ja: "上海のロックダウン：新型コロナウイルスゼロの下での人道的災害",
+            excerpt_ja: "2022年春、上海の住民2500万人が2カ月以上にわたり封鎖された。飢餓、二次的死亡、暴力的な取り締まり、そして沈黙の抵抗が、ゼロコロナの本当の姿を明らかにしました。",
+            title_ko: "상하이 폐쇄: 코로나19 제로 시대의 인도주의적 재난",
+            excerpt_ko: "2022년 봄에는 2,500만 명의 상하이 주민이 두 달 넘게 봉쇄되었습니다. 기아, 2차 사망, 폭력적인 단속, 묵묵한 저항이 Zero-COVID의 진짜 모습을 드러냈습니다.",
+            title_es: "Bloqueo de Shanghai: un desastre humanitario bajo cero COVID",
+            excerpt_es: "En la primavera de 2022, 25 millones de residentes de Shanghai estuvieron encerrados durante más de dos meses. El hambre, las muertes secundarias, la aplicación violenta de la ley y la resistencia silenciada revelaron el verdadero rostro de Zero-COVID.",
+            title_de: "Shanghai Lockdown: Eine humanitäre Katastrophe unter Null-COVID",
+            excerpt_de: "Im Frühjahr 2022 wurden 25 Millionen Einwohner Shanghais für mehr als zwei Monate abgeriegelt. Hunger, sekundäre Todesfälle, gewaltsame Durchsetzung und zum Schweigen gebrachter Widerstand enthüllten das wahre Gesicht von Zero-COVID.",
+            title_fr: "Confinement de Shanghai : une catastrophe humanitaire sous zéro-COVID",
+            excerpt_fr: "Au printemps 2022, 25 millions d’habitants de Shanghai ont été confinés pendant plus de deux mois. La famine, les décès secondaires, la répression violente et la résistance silencieuse ont révélé le vrai visage du Zéro-COVID.",
+            title_no: "Shanghai Lockdown: En humanitær katastrofe under null-COVID",
+            excerpt_no: "Våren 2022 ble 25 millioner innbyggere i Shanghai sperret inne i over to måneder. Sult, sekundære dødsfall, voldelig håndhevelse og tauset motstand avslørte det sanne ansiktet til Zero-COVID.",
+            title_nl: "Shanghai Lockdown: een humanitaire ramp onder Zero-COVID",
+            excerpt_nl: "In het voorjaar van 2022 zaten 25 miljoen inwoners van Shanghai ruim twee maanden opgesloten. Hongersnood, secundaire sterfgevallen, gewelddadige handhaving en tot zwijgen gebracht verzet onthulden het ware gezicht van Zero-COVID.",
+            title_it: "Blocco di Shanghai: un disastro umanitario sotto zero-COVID",
+            excerpt_it: "Nella primavera del 2022, 25 milioni di residenti di Shanghai sono stati rinchiusi per oltre due mesi. La fame, le morti secondarie, l’applicazione violenta e la resistenza silenziosa hanno rivelato il vero volto di Zero-COVID.",
             url: "posts/shanghai-lockdown.html"
         },
         {
@@ -184,6 +403,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2020-02-07",
             excerpt_zh: "率先示警新冠病毒的眼科醫師李文亮被警方訓誡為「造謠者」，最終感染殉職，成為中國言論自由的悲劇象徵。",
             excerpt_en: "Ophthalmologist Li Wenliang was reprimanded by police as a 'rumormonger' for first warning of COVID-19. He died after contracting the virus, becoming a tragic symbol of suppressed speech in China.",
+            title_ja: "李文亮博士: 彼らが沈黙させた内部告発者",
+            excerpt_ja: "眼科医の李文亮氏は、新型コロナウイルス感染症について最初に警告したとして「噂屋」として警察から懲戒処分を受けた。彼はウイルスに感染して死亡し、中国における言論弾圧の悲劇的な象徴となった。",
+            title_ko: "Li Wenliang 박사: 그들이 침묵시킨 내부고발자",
+            excerpt_ko: "안과의사 리원량(Li Wenliang)이 코로나19에 대해 최초 경고를 했다는 이유로 경찰로부터 '유언비어 전파자'라는 질책을 받았다. 그는 바이러스에 감염된 후 사망했으며, 이는 중국에서 억압된 언론의 비극적인 상징이 되었습니다.",
+            title_es: "Dr. Li Wenliang: el denunciante al que silenciaron",
+            excerpt_es: "El oftalmólogo Li Wenliang fue reprendido por la policía por ser un \"traficante de rumores\" por su primera advertencia sobre el COVID-19. Murió después de contraer el virus, convirtiéndose en un símbolo trágico del discurso reprimido en China.",
+            title_de: "Dr. Li Wenliang: Der Whistleblower, den sie zum Schweigen gebracht haben",
+            excerpt_de: "Der Augenarzt Li Wenliang wurde von der Polizei wegen der ersten Warnung vor COVID-19 als „Gerüchtemacher“ gerügt. Er starb, nachdem er sich mit dem Virus infiziert hatte, und wurde zum tragischen Symbol für unterdrückte Sprache in China.",
+            title_fr: "Dr Li Wenliang : Le lanceur d’alerte qu’ils ont réduit au silence",
+            excerpt_fr: "L'ophtalmologiste Li Wenliang a été réprimandé par la police comme un « marchand de rumeurs » pour son premier avertissement concernant le COVID-19. Il est décédé après avoir contracté le virus, devenant ainsi un symbole tragique de la répression de la parole en Chine.",
+            title_no: "Dr. Li Wenliang: The Whistleblower They Silented",
+            excerpt_no: "Øyelege Li Wenliang ble irettesatt av politiet som en \"ryktespreder\" for første advarsel om COVID-19. Han døde etter å ha fått viruset, og ble et tragisk symbol på undertrykt tale i Kina.",
+            title_nl: "Dr. Li Wenliang: De klokkenluider die ze tot zwijgen hebben gebracht",
+            excerpt_nl: "Oogarts Li Wenliang werd door de politie berispt als ‘geruchtenzaaier’ vanwege de eerste waarschuwing voor COVID-19. Hij stierf nadat hij het virus had opgelopen en werd een tragisch symbool van onderdrukte meningsuiting in China.",
+            title_it: "Dr. Li Wenliang: l'informatore che hanno messo a tacere",
+            excerpt_it: "L'oftalmologo Li Wenliang è stato rimproverato dalla polizia come \"parlatore di voci\" per il primo avvertimento di COVID-19. È morto dopo aver contratto il virus, diventando un tragico simbolo della repressione della parola in Cina.",
             url: "posts/li-wenliang.html"
         },
         {
@@ -192,6 +427,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2022-11-26",
             excerpt_zh: "2022年底，中國各地爆發了大規模抗議活動，民眾手舉白紙，抗議嚴苛的封控政策，並喊出了要求自由的口號。",
             excerpt_en: "In late 2022, mass protests erupted across China. People held up blank sheets of paper to protest harsh lockdown policies and shouted slogans demanding freedom.",
+            title_ja: "ホワイトペーパー運動: ゼロコロナに対する抗議",
+            excerpt_ja: "2022年後半、中国全土で大規模な抗議活動が勃発した。人々は白紙の紙を掲げて厳しいロックダウン政策に抗議し、自由を求めるスローガンを叫んだ。",
+            title_ko: "백서 운동: 제로 코로나에 대한 항의",
+            excerpt_ko: "2022년 말, 중국 전역에서 대규모 시위가 일어났습니다. 사람들은 가혹한 봉쇄 정책에 항의하기 위해 빈 종이를 들고 자유를 요구하는 구호를 외쳤다.",
+            title_es: "Movimiento del Libro Blanco: El clamor contra el COVID-Cero",
+            excerpt_es: "A finales de 2022, estallaron protestas masivas en toda China. La gente levantó hojas de papel en blanco para protestar contra las duras políticas de bloqueo y gritaron consignas exigiendo libertad.",
+            title_de: "Whitepaper-Bewegung: Der Aufschrei gegen Zero-COVID",
+            excerpt_de: "Ende 2022 kam es in ganz China zu Massenprotesten. Die Menschen hielten leere Blätter hoch, um gegen die strengen Lockdown-Maßnahmen zu protestieren, und riefen Slogans, die Freiheit forderten.",
+            title_fr: "Mouvement du livre blanc : le tollé contre le zéro-COVID",
+            excerpt_fr: "Fin 2022, des manifestations de masse ont éclaté dans toute la Chine. Les gens ont brandi des feuilles de papier vierges pour protester contre les dures politiques de confinement et ont crié des slogans exigeant la liberté.",
+            title_no: "White Paper Movement: The Outcry Against Zero-COVID",
+            excerpt_no: "På slutten av 2022 brøt det ut masseprotester over hele Kina. Folk holdt opp blanke ark for å protestere mot hard nedstengningspolitikk og ropte slagord som krever frihet.",
+            title_nl: "Witboekbeweging: de verontwaardiging tegen Zero-COVID",
+            excerpt_nl: "Eind 2022 braken er in heel China massaprotesten uit. Mensen hielden blanco vellen papier omhoog om te protesteren tegen het harde lockdown-beleid en riepen slogans waarin vrijheid werd geëist.",
+            title_it: "Movimento del Libro Bianco: la protesta contro Zero-COVID",
+            excerpt_it: "Alla fine del 2022, in tutta la Cina sono scoppiate proteste di massa. Le persone hanno mostrato fogli di carta bianchi per protestare contro le dure politiche di blocco e hanno gridato slogan che chiedevano libertà.",
             url: "posts/white-paper.html"
         },
         {
@@ -200,6 +451,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2022-10-13",
             excerpt_zh: "在中共二十大前夕，彭載舟在北京四通橋掛起橫幅，公開反對習近平獨裁，呼籲罷課罷工罷免獨裁國賊。",
             excerpt_en: "On the eve of the 20th Party Congress, Peng Zaizhou hung banners at Sitong Bridge in Beijing, publicly opposing Xi Jinping's dictatorship and calling for strikes to remove the dictator.",
+            title_ja: "彭在舟：四通橋の孤独な抗議者",
+            excerpt_ja: "第20回党大会前夜、彭在舟氏は北京の四通橋に横断幕を掲げ、公に習近平氏の独裁に反対し、独裁者を排除するためのストライキを呼びかけた。",
+            title_ko: "펑재저우(Peng Zaizhou): 쓰통교(Sitong Bridge)의 외로운 시위자",
+            excerpt_ko: "제20차 당 대회 전날, 펑재저우는 베이징 시통교에 현수막을 걸어 공개적으로 시진핑 독재에 반대하고 독재자를 제거하기 위한 파업을 촉구했습니다.",
+            title_es: "Peng Zaizhou: el manifestante solitario en el puente de Sitong",
+            excerpt_es: "En vísperas del XX Congreso del Partido, Peng Zaizhou colgó pancartas en el puente Sitong en Beijing, oponiéndose públicamente a la dictadura de Xi Jinping y convocando huelgas para derrocar al dictador.",
+            title_de: "Peng Zaizhou: Der einsame Demonstrant an der Sitong-Brücke",
+            excerpt_de: "Am Vorabend des 20. Parteikongresses hängte Peng Zaizhou an der Sitong-Brücke in Peking Transparente auf, auf denen er sich öffentlich gegen die Diktatur von Xi Jinping aussprach und zu Streiks zur Absetzung des Diktators aufrief.",
+            title_fr: "Peng Zaizhou : le manifestant solitaire au pont Sitong",
+            excerpt_fr: "À la veille du 20e Congrès du Parti, Peng Zaizhou a accroché des banderoles sur le pont Sitong à Pékin, s'opposant publiquement à la dictature de Xi Jinping et appelant à des grèves pour destituer le dictateur.",
+            title_no: "Peng Zaizhou: Den ensomme demonstranten ved Sitong-broen",
+            excerpt_no: "På tampen av den 20. partikongressen hengte Peng Zaizhou opp bannere ved Sitong-broen i Beijing, og motarbeidet offentlig Xi Jinpings diktatur og ba om streik for å fjerne diktatoren.",
+            title_nl: "Peng Zaizhou: de eenzame demonstrant bij de Sitong-brug",
+            excerpt_nl: "Aan de vooravond van het twintigste partijcongres hing Peng Zaizhou spandoeken op bij de Sitong-brug in Peking, waarin hij zich publiekelijk verzette tegen de dictatuur van Xi Jinping en opriep tot stakingen om de dictator af te zetten.",
+            title_it: "Peng Zaizhou: il manifestante solitario al ponte Sitong",
+            excerpt_it: "Alla vigilia del 20° Congresso del Partito, Peng Zaizhou ha appeso striscioni sul ponte Sitong a Pechino, opponendosi pubblicamente alla dittatura di Xi Jinping e chiedendo scioperi per rimuovere il dittatore.",
             url: "posts/peng-zaizhou.html"
         },
         {
@@ -208,6 +475,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2020-12-28",
             excerpt_zh: "張展因親赴武漢報導COVID-19疫情真相，揭露政府掩蓋的事實，被以'尋釁滋事罪'判處四年有期徒刑。",
             excerpt_en: "Zhang Zhan was sentenced to four years in prison for 'picking quarrels and provoking trouble' after traveling to Wuhan to report the truth about the COVID-19 outbreak.",
+            title_ja: "市民ジャーナリスト、チャン・ザン：武漢の真実を語る者",
+            excerpt_ja: "張戦氏は、新型コロナウイルス感染症の発生に関する真実を報告するために武漢を訪れた後、「喧嘩を売り、問題を引き起こした」罪で懲役4年の判決を受けた。",
+            title_ko: "시민기자 장잔: 우한의 진실을 말하는 사람",
+            excerpt_ko: "장잔(Zhang Zhan)은 코로나19 발병에 대한 진실을 보도하기 위해 우한(Wuhan)으로 여행을 떠난 후 '말다툼을 하고 소란을 일으킨' 혐의로 징역 4년을 선고받았다.",
+            title_es: "El periodista ciudadano Zhang Zhan: el narrador de la verdad de Wuhan",
+            excerpt_es: "Zhang Zhan fue sentenciado a cuatro años de prisión por \"provocar peleas y provocar problemas\" después de viajar a Wuhan para informar la verdad sobre el brote de COVID-19.",
+            title_de: "Bürgerjournalist Zhang Zhan: Wahrsager von Wuhan",
+            excerpt_de: "Zhang Zhan wurde zu vier Jahren Gefängnis verurteilt, weil er „Streit angezettelt und Ärger provoziert“ hatte, nachdem er nach Wuhan gereist war, um die Wahrheit über den COVID-19-Ausbruch zu berichten.",
+            title_fr: "Le journaliste citoyen Zhang Zhan : Celui qui dit la vérité sur Wuhan",
+            excerpt_fr: "Zhang Zhan a été condamné à quatre ans de prison pour « avoir suscité des querelles et provoqué des troubles » après s'être rendu à Wuhan pour rapporter la vérité sur l'épidémie de COVID-19.",
+            title_no: "Citizen Journalist Zhang Zhan: Truth Teller of Wuhan",
+            excerpt_no: "Zhang Zhan ble dømt til fire års fengsel for å \"plukke krangler og provosere bråk\" etter å ha reist til Wuhan for å rapportere sannheten om COVID-19-utbruddet.",
+            title_nl: "Burgerjournalist Zhang Zhan: waarheidsverteller van Wuhan",
+            excerpt_nl: "Zhang Zhan werd veroordeeld tot vier jaar gevangenisstraf wegens ‘het uitlokken van ruzies en het uitlokken van problemen’ nadat hij naar Wuhan was gereisd om de waarheid over de COVID-19-uitbraak te melden.",
+            title_it: "Il giornalista cittadino Zhang Zhan: racconta la verità di Wuhan",
+            excerpt_it: "Zhang Zhan è stato condannato a quattro anni di carcere per \"aver provocato litigi e provocato guai\" dopo essersi recato a Wuhan per denunciare la verità sull'epidemia di COVID-19.",
             url: "posts/zhang-zhan.html"
         },
         {
@@ -216,6 +499,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2015-07-09",
             excerpt_zh: "自2015年7月9日起，中共在全國範圍內大規模抓捕、傳喚、刑事拘留維權律師和人權捍衛者，涉及人數超過300人。",
             excerpt_en: "Starting July 9, 2015, the CCP launched a nationwide crackdown, arresting, summoning, and detaining over 300 human rights lawyers and defenders.",
+            title_ja: "709 人権派弁護士の弾圧",
+            excerpt_ja: "2015年7月9日から中国共産党は全国的な弾圧を開始し、300人以上の人権弁護士や擁護者を逮捕、召喚、拘留した。",
+            title_ko: "709 인권변호사 단속",
+            excerpt_ko: "2015년 7월 9일부터 중국 공산당은 전국적인 단속을 시작하여 300명이 넘는 인권 변호사와 변호인을 체포, 소환, 구금했습니다.",
+            title_es: "709 Represión contra los abogados de derechos humanos",
+            excerpt_es: "A partir del 9 de julio de 2015, el PCCh lanzó una ofensiva a nivel nacional, arrestando, citando y deteniendo a más de 300 abogados y defensores de derechos humanos.",
+            title_de: "709 Vorgehen gegen Menschenrechtsanwälte",
+            excerpt_de: "Ab dem 9. Juli 2015 leitete die KPCh eine landesweite Razzia ein, bei der über 300 Menschenrechtsanwälte und -verteidiger festgenommen, vorgeladen und inhaftiert wurden.",
+            title_fr: "709 Répression contre les avocats des droits de l'homme",
+            excerpt_fr: "Depuis le 9 juillet 2015, le PCC a lancé une campagne de répression à l'échelle nationale, arrêtant, convoquant et détenant plus de 300 avocats et défenseurs des droits de l'homme.",
+            title_no: "709 Inngrep mot menneskerettighetsadvokater",
+            excerpt_no: "Fra 9. juli 2015 lanserte KKP en landsomfattende nedbryting, arresterte, innkalling og internering av over 300 menneskerettighetsadvokater og forsvarere.",
+            title_nl: "709 Hardhandig optreden tegen mensenrechtenadvocaten",
+            excerpt_nl: "Vanaf 9 juli 2015 lanceerde de CCP landelijk hardhandig optreden, waarbij meer dan 300 mensenrechtenadvocaten en -verdedigers werden gearresteerd, gedagvaard en gevangengezet.",
+            title_it: "709 Repressione degli avvocati specializzati in diritti umani",
+            excerpt_it: "A partire dal 9 luglio 2015, il PCC ha lanciato una repressione a livello nazionale, arrestando, convocando e detenendo oltre 300 avvocati e difensori dei diritti umani.",
             url: "posts/709-crackdown.html"
         },
         {
@@ -224,6 +523,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025-01-15",
             excerpt_zh: "本報告詳細記錄了過去一年中，中國在言論自由、網絡審查以及少數民族權益方面的倒退...",
             excerpt_en: "This report details the regression in freedom of speech, internet censorship, and minority rights in China over the past year...",
+            title_ja: "2024 年中国人権年次報告書",
+            excerpt_ja: "この報告書は、過去 1 年間の中国における言論の自由、インターネット検閲、少数派の権利の後退について詳しく説明しています...",
+            title_ko: "2024년 중국 인권 연례 보고서",
+            excerpt_ko: "이 보고서는 지난 한 해 동안 중국에서 언론의 자유, 인터넷 검열, 소수자 권리가 퇴보한 상황을 자세히 설명합니다.",
+            title_es: "Informe anual 2024 sobre derechos humanos en China",
+            excerpt_es: "Este informe detalla la regresión en la libertad de expresión, la censura en Internet y los derechos de las minorías en China durante el año pasado...",
+            title_de: "Jahresbericht 2024 über Menschenrechte in China",
+            excerpt_de: "Dieser Bericht beschreibt detailliert den Rückgang der Meinungsfreiheit, der Internet-Zensur und der Minderheitenrechte in China im vergangenen Jahr ...",
+            title_fr: "Rapport annuel 2024 sur les droits de l'homme en Chine",
+            excerpt_fr: "Ce rapport détaille la régression de la liberté d'expression, de la censure sur Internet et des droits des minorités en Chine au cours de l'année écoulée...",
+            title_no: "Årsrapport 2024 om menneskerettigheter i Kina",
+            excerpt_no: "Denne rapporten beskriver tilbakegangen i ytringsfrihet, internettsensur og minoritetsrettigheter i Kina det siste året...",
+            title_nl: "Jaarverslag 2024 over de mensenrechten in China",
+            excerpt_nl: "Dit rapport beschrijft de achteruitgang in de vrijheid van meningsuiting, internetcensuur en de rechten van minderheden in China het afgelopen jaar...",
+            title_it: "Rapporto annuale 2024 sui diritti umani in Cina",
+            excerpt_it: "Questo rapporto descrive nel dettaglio la regressione della libertà di parola, della censura di Internet e dei diritti delle minoranze in Cina nell'ultimo anno...",
             url: "posts/2024-report.html"
         },
         {
@@ -232,6 +547,22 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2024-12-10",
             excerpt_zh: "隨著面部識別和社會信用體系的全面推廣，普通公民的隱私空間正在被極度壓縮...",
             excerpt_en: "With the comprehensive promotion of facial recognition and the social credit system, the privacy of ordinary citizens is being severely compressed...",
+            title_ja: "デジタル監視とプライバシーの終焉",
+            excerpt_ja: "顔認証と社会信用制度の全面的な推進により、一般国民のプライバシーは著しく圧迫されています...",
+            title_ko: "디지털 감시와 개인정보 보호의 종말",
+            excerpt_ko: "안면인식의 전면적 추진과 사회신용제도 등으로 일반 시민의 사생활이 심각하게 억압되고 있다.",
+            title_es: "Vigilancia digital y el fin de la privacidad",
+            excerpt_es: "Con la promoción integral del reconocimiento facial y el sistema de crédito social, la privacidad de los ciudadanos comunes se está comprimiendo severamente...",
+            title_de: "Digitale Überwachung und das Ende der Privatsphäre",
+            excerpt_de: "Mit der umfassenden Förderung der Gesichtserkennung und des Sozialkreditsystems wird die Privatsphäre des Normalbürgers stark eingeschränkt...",
+            title_fr: "Surveillance numérique et fin de la vie privée",
+            excerpt_fr: "Avec la promotion globale de la reconnaissance faciale et du système de crédit social, la vie privée des citoyens ordinaires est sévèrement comprimée...",
+            title_no: "Digital overvåking og slutten på personvernet",
+            excerpt_no: "Med den omfattende promoteringen av ansiktsgjenkjenning og det sosiale kredittsystemet, blir personvernet til vanlige borgere alvorlig komprimert...",
+            title_nl: "Digitale surveillance en het einde van privacy",
+            excerpt_nl: "Met de uitgebreide promotie van gezichtsherkenning en het sociale kredietsysteem wordt de privacy van gewone burgers ernstig gecomprimeerd...",
+            title_it: "Sorveglianza digitale e fine della privacy",
+            excerpt_it: "Con la promozione globale del riconoscimento facciale e del sistema di credito sociale, la privacy dei comuni cittadini viene gravemente compressa...",
             url: "posts/digital-surveillance.html"
         }
     ];
@@ -245,21 +576,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="report-content">
                     <span class="report-date">${report.date}</span>
                     <h4 class="report-title">
-                        <span class="lang-zh">${report.title_zh}</span>
-                        <span class="lang-en">${report.title_en}</span>
+                        ${renderLangSpans(report, 'title')}
                     </h4>
                     <p class="report-excerpt">
-                        <span class="lang-zh">${report.excerpt_zh}</span>
-                        <span class="lang-en">${report.excerpt_en}</span>
+                        ${renderLangSpans(report, 'excerpt')}
                     </p>
                     <a href="${report.url}" class="read-more">
                         <span class="lang-zh">閱讀全文 &rarr;</span>
                         <span class="lang-en">Read More &rarr;</span>
+                        <span class="lang-ja">続きを読む &rarr;</span>
+                        <span class="lang-ko">더 읽기 &rarr;</span>
+                        <span class="lang-es">Leer más &rarr;</span>
+                        <span class="lang-de">Weiterlesen &rarr;</span>
+                        <span class="lang-fr">Lire la suite &rarr;</span>
+                        <span class="lang-no">Les mer &rarr;</span>
+                        <span class="lang-nl">Lees verder &rarr;</span>
+                        <span class="lang-it">Leggi di più &rarr;</span>
                     </a>
                 </div>
             `;
             reportsGrid.appendChild(card);
         });
+    }
+
+    function renderLangSpans(report, field) {
+        return ['zh', 'en', 'ja', 'ko', 'es', 'de', 'fr', 'no', 'nl', 'it']
+            .map(lang => `<span class="lang-${lang}">${report[`${field}_${lang}`] || report[`${field}_en`]}</span>`)
+            .join('');
     }
 
     // Scroll Animation (Intersection Observer)
@@ -284,4 +627,3 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
-
