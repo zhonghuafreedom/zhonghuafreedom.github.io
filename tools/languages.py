@@ -1,17 +1,16 @@
 LANGUAGES = {
-    "zh": {"label": "中文", "html": "zh-Hant", "source": "zh"},
-    "en": {"label": "English", "html": "en", "source": "en"},
-    "ja": {"label": "日本語", "html": "ja", "source": "en"},
-    "ko": {"label": "한국어", "html": "ko", "source": "en"},
-    "es": {"label": "Español", "html": "es", "source": "en"},
-    "de": {"label": "Deutsch", "html": "de", "source": "en"},
-    "fr": {"label": "Français", "html": "fr", "source": "en"},
-    "no": {"label": "Norsk", "html": "no", "source": "en"},
-    "nl": {"label": "Nederlands", "html": "nl", "source": "en"},
-    "it": {"label": "Italiano", "html": "it", "source": "en"},
+    "zh": {"label": "繁體中文", "html": "zh-Hant"},
+    "en": {"label": "English", "html": "en"},
+    "ja": {"label": "日本語", "html": "ja"},
+    "ko": {"label": "한국어", "html": "ko"},
+    "es": {"label": "Español", "html": "es"},
+    "de": {"label": "Deutsch", "html": "de"},
+    "fr": {"label": "Français", "html": "fr"},
+    "no": {"label": "Norsk", "html": "no"},
+    "nl": {"label": "Nederlands", "html": "nl"},
+    "it": {"label": "Italiano", "html": "it"},
 }
 
-TARGET_LANGS = [code for code in LANGUAGES if code not in ("zh", "en")]
 ALL_LANGS = list(LANGUAGES)
 
 NAV_TEXT = {

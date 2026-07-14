@@ -6,7 +6,7 @@ const protestEvents = [
     title: {
       zh: '反對歷史洗白與勝利敘事抗議',
       en: 'Reject Historical Whitewashing and Victory Narratives Protest',
-      ja: '歴史の美化と勝利叙事に反対する抗議',
+      ja: '歴史の美化と「勝利」物語に反対する抗議',
       ko: '역사 미화와 승리 서사에 반대하는 항의',
       es: 'Protesta contra el blanqueamiento histórico y los relatos de victoria',
       de: 'Protest gegen historische Beschönigung und Siegesnarrative',
@@ -235,7 +235,20 @@ const protestEvents = [
 
 const galleryLabels = {
   photos: { zh: '張照片', en: 'photos', ja: '枚の写真', ko: '장 사진', es: 'fotos', de: 'Fotos', fr: 'photos', no: 'bilder', nl: 'foto’s', it: 'foto' },
+  photo: { zh: '照片', en: 'photo', ja: '写真', ko: '사진', es: 'foto', de: 'Foto', fr: 'photo', no: 'bilde', nl: 'foto', it: 'foto' },
   open: { zh: '打開照片', en: 'Open photo', ja: '写真を開く', ko: '사진 열기', es: 'Abrir foto', de: 'Foto öffnen', fr: 'Ouvrir la photo', no: 'Åpne bilde', nl: 'Foto openen', it: 'Apri foto' },
+  intro: {
+    zh: '八組相簿保存 254 張海外華人和平表達、集會與公共記憶的照片。',
+    en: 'Eight galleries preserve 254 photographs of peaceful expression, assembly, and public memory in overseas Chinese communities.',
+    ja: '8つのギャラリーに、海外華人コミュニティの平和的な表現、集会、公共の記憶を記録した254枚の写真を保存しています。',
+    ko: '8개 갤러리에 해외 중국계 공동체의 평화로운 표현, 집회와 공공 기억을 기록한 사진 254장을 보존합니다.',
+    es: 'Ocho galerías conservan 254 fotografías de expresión pacífica, reunión y memoria pública de comunidades chinas en el extranjero.',
+    de: 'Acht Galerien bewahren 254 Fotografien friedlicher Meinungsäußerung, Versammlungen und öffentlicher Erinnerung chinesischer Gemeinschaften im Ausland.',
+    fr: 'Huit galeries conservent 254 photographies d’expression pacifique, de rassemblements et de mémoire publique des communautés chinoises à l’étranger.',
+    no: 'Åtte gallerier bevarer 254 fotografier av fredelige ytringer, samlinger og offentlig minne i kinesiske miljøer i utlandet.',
+    nl: 'Acht galerijen bewaren 254 foto’s van vreedzame meningsuiting, bijeenkomsten en publieke herinnering binnen Chinese gemeenschappen in het buitenland.',
+    it: 'Otto gallerie conservano 254 fotografie di espressione pacifica, assemblee e memoria pubblica delle comunità cinesi all’estero.'
+  },
   total: {
     zh: '8 場活動 · 254 張照片',
     en: '8 events · 254 photos',
@@ -250,42 +263,72 @@ const galleryLabels = {
   }
 };
 
-function langSpans(values) {
-  return Object.entries(values).map(([lang, text]) => `<span class="lang-${lang}">${text}</span>`).join('');
-}
-
 function padPhotoNumber(index) {
   return String(index).padStart(3, '0');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function currentLanguage() {
+  const selected = document.body?.dataset.lang || 'zh';
+  return ['zh', 'en', 'ja', 'ko', 'es', 'de', 'fr', 'no', 'nl', 'it'].includes(selected) ? selected : 'zh';
+}
+
+function renderGallery() {
   const gallery = document.querySelector('[data-protest-gallery]');
-  const summary = document.querySelector('[data-protest-summary]');
-  if (!gallery || !summary) return;
+  if (!gallery || gallery.dataset.rendered === 'true') return;
+  gallery.dataset.rendered = 'true';
 
-  summary.innerHTML = langSpans(galleryLabels.total);
-
-  gallery.innerHTML = protestEvents.map((event) => {
+  gallery.innerHTML = protestEvents.map((event, eventIndex) => {
     const photos = Array.from({ length: event.count }, (_, index) => {
       const number = padPhotoNumber(index + 1);
       const src = `images/protests/${event.slug}/photo-${number}.jpg`;
       return `
-        <a class="protest-photo" href="${src}" target="_blank" rel="noopener noreferrer" aria-label="${event.date} ${galleryLabels.open.en} ${number}">
-          <img src="${src}" alt="${event.date} ${event.title.en} photo ${number}" loading="lazy">
+        <a class="protest-photo" href="${src}" target="_blank" rel="noopener noreferrer" data-event-index="${eventIndex}" data-photo-number="${number}">
+          <img src="${src}" alt="" loading="lazy">
         </a>`;
     }).join('');
 
     return `
-      <section class="protest-event" id="event-${event.slug}">
+      <section class="protest-event" id="event-${event.slug}" data-event-index="${eventIndex}">
         <div class="protest-event-header">
           <div>
             <span class="protest-date">${event.date}</span>
-            <h2>${langSpans(event.title)}</h2>
-            <p class="protest-place">${langSpans(event.place)}</p>
+            <h2 data-protest-title></h2>
+            <p class="protest-place" data-protest-place></p>
           </div>
-          <div class="protest-count"><strong>${event.count}</strong><span>${langSpans(galleryLabels.photos)}</span></div>
+          <div class="protest-count"><strong>${event.count}</strong><span data-protest-count-label></span></div>
         </div>
         <div class="protest-photo-grid">${photos}</div>
       </section>`;
   }).join('');
+}
+
+function updateGalleryLanguage(lang = currentLanguage()) {
+  const summary = document.querySelector('[data-protest-summary]');
+  const intro = document.querySelector('[data-protest-intro]');
+  if (summary) summary.textContent = galleryLabels.total[lang];
+  if (intro) intro.textContent = galleryLabels.intro[lang];
+
+  document.querySelectorAll('.protest-event[data-event-index]').forEach((section) => {
+    const event = protestEvents[Number(section.dataset.eventIndex)];
+    section.querySelector('[data-protest-title]').textContent = event.title[lang];
+    section.querySelector('[data-protest-place]').textContent = event.place[lang];
+    section.querySelector('[data-protest-count-label]').textContent = galleryLabels.photos[lang];
+  });
+
+  document.querySelectorAll('.protest-photo[data-event-index]').forEach((link) => {
+    const event = protestEvents[Number(link.dataset.eventIndex)];
+    const number = link.dataset.photoNumber;
+    link.setAttribute('aria-label', `${galleryLabels.open[lang]} ${number}: ${event.date} — ${event.title[lang]}`);
+    const image = link.querySelector('img');
+    image.alt = `${event.date} — ${event.title[lang]} — ${galleryLabels.photo[lang]} ${number}`;
+  });
+}
+
+document.addEventListener('site-language-change', (event) => {
+  updateGalleryLanguage(event.detail.language);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderGallery();
+  updateGalleryLanguage();
 });

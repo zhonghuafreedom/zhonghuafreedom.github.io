@@ -1,0 +1,11 @@
+exclude:
+  - backup_legacy
+  - docs
+  - tools
+  - posts/template.html
+  - README.md
+  - DNS配置指南.md
+  - configure-domain.sh
+  - CNAME.txt
+  - .gitignore
+  - .DS_Store

@@ -1,1 +1,25 @@
+# macOS metadata
+.DS_Store
+
+# Retired local translation cache
 tools/.translation-cache.json
+
+# Local screenshots and visual-QA output
+.visual-qa/
+visual-qa/
+screenshots/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Node package-manager diagnostic logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary local HTTP-server logs
+.http-server.log
+http-server*.log
+local-server*.log
