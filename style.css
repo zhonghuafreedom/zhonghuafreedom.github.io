@@ -127,6 +127,13 @@ ul {
     margin-right: 15px;
 }
 
+.site-title h1 {
+    font-size: clamp(1.05rem, 1.9vw, 1.8rem);
+    line-height: 1.2;
+    white-space: nowrap;
+    margin: 0;
+}
+
 .site-title p {
     font-family: var(--font-serif);
     font-size: 1.5rem;

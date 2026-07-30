@@ -33,8 +33,16 @@ POSTS = ROOT / "posts"
 LANGS = ("zh", "en", "ja", "ko", "es", "de", "fr", "no", "nl", "it")
 HEADER_TRANSLATION_LANGS = ("ja", "ko", "es", "de", "fr", "no", "nl", "it")
 FILES = tuple(sorted(path for path in POSTS.glob("*.html") if path.name != "template.html"))
-EXPECTED_FILES = 54
-EXPECTED_SOURCE_GROUPS = 294
+EXPECTED_FILES = 64
+# The batch-nine report-card baseline was captured when the site published 54
+# dossiers.  Its row arithmetic and card indices stay anchored to that capture;
+# batch fourteen prepends ten cards and re-anchors the comparison by offset.
+POST_BATCH9_BASELINE_FILES = 54
+EXPECTED_SOURCE_GROUPS = 346
+# 294 unique sources through batch thirteen plus the 52 first cited by the ten
+# batch-fourteen dossiers.  The 52nd is the Dui Hua statement added after an
+# independent re-check found the Yiu Man-tin release date was not carried by
+# the sources originally cited for it.
 PUBLIC_PAGES = ("about.html", "contact.html", "privacy.html", "sources.html", "terms.html", "protests.html")
 PUBLIC_NAV_PAGES = PUBLIC_PAGES + ("index.html", "reports.html")
 RELEASE_ROOT_PAGES = (
@@ -7376,6 +7384,2610 @@ CASE_SEMANTIC_CONTRACTS.update({
     },
 })
 
+
+# --- batch14 case semantic contracts (generated) ---
+# Derived from the rendered pages: every fact id, section, source ref,
+# timeline triple, dispute-matrix value and visible-number token below
+# was read back out of the ten dossiers, not authored by hand.
+CASE_SEMANTIC_CONTRACTS.update({
+    "jiang-yefei-thailand-deportation.html": {
+        "disputes": (
+            (
+                "jiang-yefei-thailand-deportation-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "front-line-defenders-cpj-rfa-and-hrw-records",
+                "chongqing-conviction-and-charge-name-only",
+                "verdict-indictment-and-cited-cartoons-withheld-charge-name-unverifiable",
+                "thai-immigration-police-and-chongqing-first-intermediate-court",
+            ),
+        ),
+        "facts": (
+            (
+                "jiang-yefei-thailand-deportation-overview-1",
+                "overview",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-overview-2",
+                "overview",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-1",
+                "timeline",
+                (
+                    "fld-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-2",
+                "timeline",
+                (
+                    "cpj-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-3",
+                "timeline",
+                (
+                    "cpj-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-4",
+                "timeline",
+                (
+                    "fld-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-5",
+                "timeline",
+                (
+                    "fld-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-6",
+                "timeline",
+                (
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-7",
+                "timeline",
+                (
+                    "fld-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-8",
+                "timeline",
+                (
+                    "rfa-en-2018",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-9",
+                "timeline",
+                (
+                    "fld-jiang",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-evidence-1",
+                "evidence",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-evidence-2",
+                "evidence",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-evidence-official-gap",
+                "evidence",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-state-1",
+                "state-machinery",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-state-2",
+                "state-machinery",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-rights-analysis",
+                "rights-analysis",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "jiang-yefei-thailand-deportation-protection",
+                "protection",
+                (
+                    "fld-jiang",
+                    "cpj-jiang",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "fld-jiang",
+            "cpj-jiang",
+            "rfa-en-2018",
+            "hrw-2026",
+        ),
+        "timeline": (
+            (
+                "jiang-yefei-thailand-deportation-timeline-1",
+                "姜野飛",
+                "接受海外媒體採訪後離境流亡泰國並主持海外民運組織分部",
+                "開始長期流亡，成為中國當局持續關注的對象",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-2",
+                "姜野飛",
+                "在境外社交平台持續發表政治漫畫",
+                "公開表達內容被完整留存，日後成為刑事追究的對象",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-3",
+                "姜野飛",
+                "在海外中文媒體發表批評中國人權狀況的作品",
+                "境外發表的作品成為後來指控所指向的行為",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-4",
+                "聯合國難民署與加拿大",
+                "作出難民認定並同意接收",
+                "他在法律上已受國際難民保護，等待安置",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-5",
+                "泰國移民警察",
+                "以證件事由拘留已獲難民認定者",
+                "安置程序中斷，他進入被遣返的風險狀態",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-6",
+                "泰國當局與中國當局",
+                "執行強制遣返並在入境後即行羈押",
+                "難民保護失效，他進入不受外界監督的羈押狀態",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-7",
+                "重慶市第一中級人民法院",
+                "不公開審理並宣判",
+                "境外的表達行為被轉化為刑罰，判決書未公開",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-8",
+                "自由亞洲電台",
+                "披露秘密審判與程序限制",
+                "判決結果由境外媒體而非法院公告為外界所知",
+            ),
+            (
+                "jiang-yefei-thailand-deportation-timeline-9",
+                "姜野飛",
+                "服刑期滿離開監獄",
+                "權利限制延續，外界難以核實其處境",
+            ),
+        ),
+        "visible_numbers": {
+            "jiang-yefei-thailand-deportation-overview-1": ["13", "2008", "2014", "2015", "2018"],
+            "jiang-yefei-thailand-deportation-timeline-1": ["2008"],
+            "jiang-yefei-thailand-deportation-timeline-2": ["2014"],
+            "jiang-yefei-thailand-deportation-timeline-3": ["2015"],
+            "jiang-yefei-thailand-deportation-timeline-4": ["04", "2015"],
+            "jiang-yefei-thailand-deportation-timeline-5": ["10", "2015", "28"],
+            "jiang-yefei-thailand-deportation-timeline-6": ["11", "13", "2015"],
+            "jiang-yefei-thailand-deportation-timeline-7": ["07", "13", "2018"],
+            "jiang-yefei-thailand-deportation-timeline-8": ["07", "2018", "25"],
+            "jiang-yefei-thailand-deportation-timeline-9": ["07", "2022", "30"],
+            "jiang-yefei-thailand-deportation-evidence-1": ["13", "2015", "2018", "2022", "28"],
+            "jiang-yefei-thailand-deportation-evidence-2": ["2026"],
+            "jiang-yefei-thailand-deportation-state-1": ["13", "2015", "28"],
+            "jiang-yefei-thailand-deportation-protection": ["2015"],
+        },
+    },
+    "dong-guangping-thailand-deportation.html": {
+        "disputes": (
+            (
+                "dong-guangping-thailand-deportation-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "front-line-defenders-rfa-and-hrw-records",
+                "two-convictions-announced-without-case-documents",
+                "no-indictment-verdict-or-hearing-record-for-either-trial",
+                "thai-and-vietnamese-authorities-with-chongqing-and-zhengzhou-organs",
+            ),
+        ),
+        "facts": (
+            (
+                "dong-guangping-thailand-deportation-overview-1",
+                "overview",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-overview-2",
+                "overview",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-1",
+                "timeline",
+                (
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-2",
+                "timeline",
+                (
+                    "fld-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-3",
+                "timeline",
+                (
+                    "fld-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-4",
+                "timeline",
+                (
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-5",
+                "timeline",
+                (
+                    "rfa-en-2018",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-6",
+                "timeline",
+                (
+                    "fld-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-7",
+                "timeline",
+                (
+                    "rfa-zh-2023",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-8",
+                "timeline",
+                (
+                    "rfa-zh-2023",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-9",
+                "timeline",
+                (
+                    "rfa-zh-2023",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-10",
+                "timeline",
+                (
+                    "hrw-2026",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-evidence-1",
+                "evidence",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-evidence-2",
+                "evidence",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-evidence-official-gap",
+                "evidence",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-state-1",
+                "state-machinery",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-state-2",
+                "state-machinery",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-rights-analysis",
+                "rights-analysis",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+            (
+                "dong-guangping-thailand-deportation-protection",
+                "protection",
+                (
+                    "fld-dong",
+                    "rfa-zh-2023",
+                    "rfa-en-2018",
+                    "hrw-2026",
+                    "wiki-dong",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "fld-dong",
+            "rfa-zh-2023",
+            "rfa-en-2018",
+            "hrw-2026",
+            "wiki-dong",
+        ),
+        "timeline": (
+            (
+                "dong-guangping-thailand-deportation-timeline-1",
+                "中國警方",
+                "因公開信將其開除並判處監禁",
+                "他在1990年代即被納入政治案件記錄，成為長期監控對象",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-2",
+                "董廣平",
+                "在境外申請難民保護並參與流亡異議社群",
+                "取得國際保護文件，等待第三國安置",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-3",
+                "泰國移民警察",
+                "拘留已獲難民保護的兩人",
+                "安置程序中斷，兩人同時面臨遣返",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-4",
+                "泰國當局與中國當局",
+                "執行強制遣返並在入境後羈押",
+                "難民保護在移交中失效，他被納入刑事程序",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-5",
+                "重慶市第一中級人民法院",
+                "秘密審理並作出定罪判決",
+                "境外尋求庇護與異議往來被轉化為國家安全罪刑罰",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-6",
+                "董廣平",
+                "服刑期滿離開監獄",
+                "回到監控之下，其後再度尋求離境",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-7",
+                "越南當局",
+                "抓捕在越南尋求庇護的中國異議人士",
+                "第二次庇護嘗試中斷，他被關押待移交",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-8",
+                "越南當局、廣西邊境警察與鄭州警方",
+                "跨境移交並轉入監視居住與看守所單獨羈押",
+                "他長時間處於不受外界監督的羈押狀態",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-9",
+                "中國司法機關",
+                "僅以出境行為定罪並執行刑期",
+                "尋求庇護的行為本身被作為犯罪處罰",
+            ),
+            (
+                "dong-guangping-thailand-deportation-timeline-10",
+                "董廣平",
+                "第三次離境並最終獲第三國安置",
+                "經歷兩次遣返後始脫離中國有關機關的直接控制",
+            ),
+        ),
+        "visible_numbers": {
+            "dong-guangping-thailand-deportation-overview-1": ["13", "1999", "2015", "2018", "2022"],
+            "dong-guangping-thailand-deportation-overview-2": ["20", "2023", "2026"],
+            "dong-guangping-thailand-deportation-timeline-1": ["1989", "1999"],
+            "dong-guangping-thailand-deportation-timeline-2": ["09", "2015"],
+            "dong-guangping-thailand-deportation-timeline-3": ["10", "2015", "28"],
+            "dong-guangping-thailand-deportation-timeline-4": ["11", "13", "2015"],
+            "dong-guangping-thailand-deportation-timeline-5": ["07", "13", "2018"],
+            "dong-guangping-thailand-deportation-timeline-6": ["02", "08", "2019"],
+            "dong-guangping-thailand-deportation-timeline-7": ["08", "11", "2022", "22"],
+            "dong-guangping-thailand-deportation-timeline-8": ["10", "2022"],
+            "dong-guangping-thailand-deportation-timeline-9": ["10", "20", "2023"],
+            "dong-guangping-thailand-deportation-timeline-10": ["06", "2026", "26"],
+            "dong-guangping-thailand-deportation-evidence-1": ["13", "2015", "2018", "2019", "28"],
+            "dong-guangping-thailand-deportation-evidence-2": ["2026"],
+            "dong-guangping-thailand-deportation-state-1": ["2015", "2022"],
+            "dong-guangping-thailand-deportation-protection": ["2015", "2022", "2026"],
+        },
+    },
+    "fu-cha-gusa-publisher.html": {
+        "disputes": (
+            (
+                "fu-cha-gusa-publisher-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "cna-hrw-and-taipei-times-records",
+                "taiwan-affairs-office-confirmed-the-verdict-only",
+                "no-indictment-verdict-or-identified-publication-shown-to-family",
+                "shanghai-state-security-and-shanghai-first-intermediate-court",
+            ),
+        ),
+        "facts": (
+            (
+                "fu-cha-gusa-publisher-overview-1",
+                "overview",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-overview-2",
+                "overview",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-1",
+                "timeline",
+                (
+                    "fc-s1",
+                    "fc-s3",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-2",
+                "timeline",
+                (
+                    "fc-s3",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-3",
+                "timeline",
+                (
+                    "fc-s2",
+                    "fc-s3",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-4",
+                "timeline",
+                (
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-5",
+                "timeline",
+                (
+                    "fc-s1",
+                    "fc-s3",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-6",
+                "timeline",
+                (
+                    "fc-s1",
+                    "fc-s3",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-7",
+                "timeline",
+                (
+                    "fc-s2",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-8",
+                "timeline",
+                (
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-9",
+                "timeline",
+                (
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-evidence-1",
+                "evidence",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-evidence-2",
+                "evidence",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-evidence-official-gap",
+                "evidence",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-state-1",
+                "state-machinery",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-state-2",
+                "state-machinery",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-rights-analysis",
+                "rights-analysis",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+            (
+                "fu-cha-gusa-publisher-protection",
+                "protection",
+                (
+                    "fc-s1",
+                    "fc-s2",
+                    "fc-s3",
+                    "fc-s4",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "fc-s1",
+            "fc-s2",
+            "fc-s3",
+            "fc-s4",
+        ),
+        "timeline": (
+            (
+                "fu-cha-gusa-publisher-timeline-1",
+                "gusa-publishing-fu-cha",
+                "published-books-challenging-official-historical-narratives",
+                "lawful-chinese-language-publishing-took-shape-outside-mainland-jurisdiction",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-2",
+                "fu-cha-taiwan-residence",
+                "settled-in-taiwan-and-continued-editorial-work",
+                "his-professional-life-and-family-ties-spanned-both-sides",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-3",
+                "fu-cha-taiwan-identity",
+                "obtained-taiwan-identity-requiring-mainland-household-deregistration",
+                "an-administrative-requirement-created-a-reason-to-enter-china",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-4",
+                "shanghai-state-security-fu-cha",
+                "detained-him-during-a-household-registration-errand",
+                "the-publisher-disappeared-into-incommunicado-custody",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-5",
+                "shanghai-first-intermediate-court-fu-cha",
+                "convicted-him-of-inciting-secession-behind-closed-doors",
+                "publishing-work-was-converted-into-a-national-security-sentence",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-6",
+                "taiwan-affairs-office-fu-cha",
+                "disclosed-the-verdict-through-a-political-body-not-the-court",
+                "the-case-became-public-only-after-the-judgment-took-effect",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-7",
+                "human-rights-watch-fu-cha",
+                "documented-the-secret-trial-and-the-withheld-case-materials",
+                "an-international-record-of-due-process-denial-was-established",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-8",
+                "prison-authorities-fu-cha",
+                "released-him-at-the-end-of-the-three-year-term",
+                "custody-ended-but-restrictions-continued",
+            ),
+            (
+                "fu-cha-gusa-publisher-timeline-9",
+                "exit-controls-fu-cha",
+                "barred-him-from-leaving-china-after-release",
+                "his-family-and-publishing-house-remained-separated-from-him",
+            ),
+        ),
+        "visible_numbers": {
+            "fu-cha-gusa-publisher-overview-1": ["17", "2013", "2023", "2025"],
+            "fu-cha-gusa-publisher-overview-2": ["2026"],
+            "fu-cha-gusa-publisher-timeline-1": ["2009"],
+            "fu-cha-gusa-publisher-timeline-2": ["2013"],
+            "fu-cha-gusa-publisher-timeline-3": ["2023"],
+            "fu-cha-gusa-publisher-timeline-4": ["03", "2023", "21"],
+            "fu-cha-gusa-publisher-timeline-5": ["02", "17", "2025"],
+            "fu-cha-gusa-publisher-timeline-6": ["03", "2025", "26"],
+            "fu-cha-gusa-publisher-timeline-7": ["04", "07", "2025"],
+            "fu-cha-gusa-publisher-timeline-8": ["05", "2026"],
+            "fu-cha-gusa-publisher-timeline-9": ["06", "10", "2026"],
+            "fu-cha-gusa-publisher-evidence-2": ["2025", "26"],
+            "fu-cha-gusa-publisher-state-1": ["17", "2025"],
+            "fu-cha-gusa-publisher-state-2": ["2026"],
+        },
+    },
+    "yiu-man-tin-morning-bell.html": {
+        "disputes": (
+            (
+                "yiu-man-tin-morning-bell-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "cpj-ifex-and-rfa-records",
+                "smuggling-conviction-and-ten-year-term-announced",
+                "verdict-unpublished-sentencing-date-and-fine-amount-conflict",
+                "shenzhen-intermediate-court-and-dongguan-prison",
+            ),
+        ),
+        "facts": (
+            (
+                "yiu-man-tin-morning-bell-overview-1",
+                "overview",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-overview-2",
+                "overview",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-1",
+                "timeline",
+                (
+                    "ym-s1",
+                    "ym-s4",
+                    "ym-s5",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-2",
+                "timeline",
+                (
+                    "ym-s2",
+                    "ym-s4",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-3",
+                "timeline",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-4",
+                "timeline",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s4",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-5",
+                "timeline",
+                (
+                    "ym-s1",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-6",
+                "timeline",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-7",
+                "timeline",
+                (
+                    "ym-s1",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-8",
+                "timeline",
+                (
+                    "ym-s1",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-9",
+                "timeline",
+                (
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-evidence-1",
+                "evidence",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-evidence-2",
+                "evidence",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-evidence-official-gap",
+                "evidence",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-state-1",
+                "state-machinery",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-state-2",
+                "state-machinery",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-rights-analysis",
+                "rights-analysis",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+            (
+                "yiu-man-tin-morning-bell-protection",
+                "protection",
+                (
+                    "ym-s1",
+                    "ym-s2",
+                    "ym-s3",
+                    "ym-s4",
+                    "ym-s5",
+                    "ym-s6",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "ym-s1",
+            "ym-s2",
+            "ym-s3",
+            "ym-s4",
+            "ym-s5",
+            "ym-s6",
+        ),
+        "timeline": (
+            (
+                "yiu-man-tin-morning-bell-timeline-1",
+                "morning-bell-press-yiu-man-tin",
+                "published-books-banned-in-mainland-china",
+                "hong-kong-served-as-a-lawful-venue-for-critical-chinese-publishing",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-2",
+                "yiu-man-tin-yu-jie-book",
+                "prepared-a-book-criticizing-the-top-leader",
+                "threats-preceded-the-cross-border-detention",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-3",
+                "shenzhen-border-authorities-yiu-man-tin",
+                "detained-him-on-arrival-after-a-paint-delivery-pretext",
+                "a-hong-kong-publisher-entered-mainland-jurisdiction-and-lost-his-liberty",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-4",
+                "shenzhen-prosecuting-authorities-yiu-man-tin",
+                "formally-arrested-him-on-a-smuggling-charge",
+                "a-publishing-case-was-reframed-as-an-economic-crime",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-5",
+                "shenzhen-intermediate-court-yiu-man-tin",
+                "sentenced-him-to-ten-years-in-a-closed-trial",
+                "a-minor-alleged-customs-offence-produced-a-decade-in-prison",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-6",
+                "prison-authorities-yiu-man-tin",
+                "held-him-through-a-stroke-and-chronic-illness",
+                "an-elderly-prisoner-served-a-long-term-in-declining-health",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-7",
+                "dongguan-prison-yiu-man-tin",
+                "reduced-his-term-by-eight-months",
+                "almost-the-entire-ten-year-sentence-was-still-executed",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-8",
+                "prison-authorities-yiu-man-tin-family",
+                "restricted-family-contact-to-monthly-video-visits",
+                "independent-verification-of-his-condition-became-nearly-impossible",
+            ),
+            (
+                "yiu-man-tin-morning-bell-timeline-9",
+                "yiu-man-tin-release",
+                "completed-the-term-and-returned-to-hong-kong",
+                "a-decade-of-imprisonment-followed-lawful-publishing-in-hong-kong",
+            ),
+        ),
+        "visible_numbers": {
+            "yiu-man-tin-morning-bell-overview-1": ["2006", "2013", "2014", "27"],
+            "yiu-man-tin-morning-bell-overview-2": ["2023", "26"],
+            "yiu-man-tin-morning-bell-timeline-1": ["2006"],
+            "yiu-man-tin-morning-bell-timeline-2": ["2013"],
+            "yiu-man-tin-morning-bell-timeline-3": ["10", "2013", "27"],
+            "yiu-man-tin-morning-bell-timeline-4": ["11", "2013"],
+            "yiu-man-tin-morning-bell-timeline-5": ["05", "2014"],
+            "yiu-man-tin-morning-bell-timeline-6": ["2015"],
+            "yiu-man-tin-morning-bell-timeline-7": ["2019"],
+            "yiu-man-tin-morning-bell-timeline-8": ["03", "2021"],
+            "yiu-man-tin-morning-bell-timeline-9": ["02", "2023", "26"],
+            "yiu-man-tin-morning-bell-evidence-1": ["2021"],
+            "yiu-man-tin-morning-bell-evidence-official-gap": ["2014"],
+            "yiu-man-tin-morning-bell-state-1": ["2013"],
+            "yiu-man-tin-morning-bell-state-2": ["2021"],
+            "yiu-man-tin-morning-bell-rights-analysis": ["2013"],
+        },
+    },
+    "sydney-student-secession-case.html": {
+        "disputes": (
+            (
+                "sydney-student-secession-case-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "initium-guardian-epoch-times-and-tibet-voice-records",
+                "no-official-document-or-court-name-released",
+                "closed-trial-and-undelivered-verdict-hide-which-rally-was-punished",
+                "chinese-security-organs-and-the-unnamed-sentencing-court",
+            ),
+        ),
+        "facts": (
+            (
+                "sydney-student-secession-case-overview-1",
+                "overview",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-overview-2",
+                "overview",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-1",
+                "timeline",
+                (
+                    "s1",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-2",
+                "timeline",
+                (
+                    "s2",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-3",
+                "timeline",
+                (
+                    "s3",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-4",
+                "timeline",
+                (
+                    "s1",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-5",
+                "timeline",
+                (
+                    "s2",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-6",
+                "timeline",
+                (
+                    "s2",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-7",
+                "timeline",
+                (
+                    "s3",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-timeline-8",
+                "timeline",
+                (
+                    "s1",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-evidence-1",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-evidence-2",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-evidence-official-gap",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-state-1",
+                "state-machinery",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-state-2",
+                "state-machinery",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-rights-analysis",
+                "rights-analysis",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+            (
+                "sydney-student-secession-case-protection",
+                "protection",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+        ),
+        "timeline": (
+            (
+                "sydney-student-secession-case-timeline-1",
+                "悉尼大學中國留學生（姓名未公開）",
+                "參與悉尼聲援中國白紙運動、反對清零政策的示威",
+                "在公開場合留下可被識別的政治表達記錄",
+            ),
+            (
+                "sydney-student-secession-case-timeline-2",
+                "同一名留學生",
+                "參與兩場聲援中國少數民族的和平集會",
+                "這兩場集會後來成為中國方面指控其分裂國家的核心事實",
+            ),
+            (
+                "sydney-student-secession-case-timeline-3",
+                "該名留學生",
+                "自行從悉尼返回中國",
+                "離開澳洲法律保護範圍，進入中國刑事管轄",
+            ),
+            (
+                "sydney-student-secession-case-timeline-4",
+                "他在悉尼的朋友與僱主",
+                "自2025年1月起無法再與他取得聯繫",
+                "失聯成為外界得知其被拘押的唯一線索",
+            ),
+            (
+                "sydney-student-secession-case-timeline-5",
+                "中國法院（名稱未公開）",
+                "以「分裂國家罪」審理並判處有期徒刑六年",
+                "在澳洲的和平集會被轉換為危害國家安全的刑事定罪，家屬未獲判決書",
+            ),
+            (
+                "sydney-student-secession-case-timeline-6",
+                "《衛報》與 Chin@Strategy",
+                "刊出並轉載獨家報導，首次披露此案",
+                "案件進入公共視野，但為當事人安全未公開姓名",
+            ),
+            (
+                "sydney-student-secession-case-timeline-7",
+                "大紀元、西藏之聲與人權觀察",
+                "以中文轉述案情並作出評論",
+                "案件被置於白紙運動後留學生遭系統性壓制的脈絡中",
+            ),
+            (
+                "sydney-student-secession-case-timeline-8",
+                "端傳媒",
+                "指出指控適用的罪名級別",
+                "確認是較重的「分裂國家罪」，而非較輕的「煽動分裂國家罪」",
+            ),
+        ),
+        "visible_numbers": {
+            "sydney-student-secession-case-overview-1": ["2024", "2025"],
+            "sydney-student-secession-case-timeline-1": ["11", "2022"],
+            "sydney-student-secession-case-timeline-2": ["2022", "2024"],
+            "sydney-student-secession-case-timeline-3": ["12", "2024"],
+            "sydney-student-secession-case-timeline-4": ["01", "2025"],
+            "sydney-student-secession-case-timeline-5": ["03", "2026"],
+            "sydney-student-secession-case-timeline-6": ["04", "2026", "21"],
+            "sydney-student-secession-case-timeline-7": ["04", "2026", "22"],
+            "sydney-student-secession-case-timeline-8": ["04", "2026", "30"],
+            "sydney-student-secession-case-state-1": ["2024"],
+            "sydney-student-secession-case-rights-analysis": ["2024", "2025"],
+        },
+    },
+    "luo-daiqing-twitter-case.html": {
+        "disputes": (
+            (
+                "luo-daiqing-twitter-case-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "rfa-georgetown-tracker-and-inside-higher-ed-records",
+                "verdict-briefly-posted-then-removed-from-the-judgments-website",
+                "indictment-never-published-and-investigation-and-defence-arrangements-unverifiable",
+                "wuhan-police-and-wuhan-court-with-the-judgments-website-operator",
+            ),
+        ),
+        "facts": (
+            (
+                "luo-daiqing-twitter-case-overview-1",
+                "overview",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-overview-2",
+                "overview",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-1",
+                "timeline",
+                (
+                    "s3",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-2",
+                "timeline",
+                (
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-3",
+                "timeline",
+                (
+                    "s1",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-4",
+                "timeline",
+                (
+                    "s1",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-5",
+                "timeline",
+                (
+                    "s4",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-6",
+                "timeline",
+                (
+                    "s2",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-7",
+                "timeline",
+                (
+                    "s2",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-evidence-1",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-evidence-2",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-evidence-official-gap",
+                "evidence",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-state-1",
+                "state-machinery",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-state-2",
+                "state-machinery",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-rights-analysis",
+                "rights-analysis",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+            (
+                "luo-daiqing-twitter-case-protection",
+                "protection",
+                (
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4",
+                    "s5",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+        ),
+        "timeline": (
+            (
+                "luo-daiqing-twitter-case-timeline-1",
+                "羅岱青（時年20歲，明尼蘇達大學文理學院2018–19學年學生）",
+                "在美國以推特帳號發布並轉發嘲諷習近平的圖文與拼圖",
+                "這些推文後來成為中國法院判決所依據的全部行為",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-2",
+                "羅岱青",
+                "自美國返回湖北武漢探親",
+                "自願入境，隨即進入中國刑事管轄",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-3",
+                "武漢警方",
+                "在武漢將羅岱青抓獲",
+                "因在美國發表的推文被刑事拘押",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-4",
+                "武漢市武昌區人民法院",
+                "以「尋釁滋事罪」判處有期徒刑六個月",
+                "境外言論被正式轉化為中國的刑事定罪",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-5",
+                "羅岱青",
+                "刑滿釋放",
+                "六個月刑期含審前羈押折抵，出獄後的限制情況未公開",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-6",
+                "自由亞洲電台、Inside Higher Ed 與明尼蘇達大學",
+                "披露案件並致電本人；校方發言人 Jake Ricker 作出回應",
+                "他確認報導「基本屬實」但拒談監控；案件進入美國高教界關於留學生海外言論風險的討論",
+            ),
+            (
+                "luo-daiqing-twitter-case-timeline-7",
+                "中國裁判文書網",
+                "撤下該案判決書",
+                "官方唯一公開過的原始文書從公共渠道消失",
+            ),
+        ),
+        "visible_numbers": {
+            "luo-daiqing-twitter-case-overview-1": ["12", "2018", "2019", "40"],
+            "luo-daiqing-twitter-case-overview-2": ["11", "2020"],
+            "luo-daiqing-twitter-case-timeline-1": ["09", "10", "2018"],
+            "luo-daiqing-twitter-case-timeline-2": ["2019"],
+            "luo-daiqing-twitter-case-timeline-3": ["07", "12", "2019"],
+            "luo-daiqing-twitter-case-timeline-4": ["05", "11", "2019", "40"],
+            "luo-daiqing-twitter-case-timeline-5": ["01", "11", "2020"],
+            "luo-daiqing-twitter-case-timeline-6": ["01", "2020", "23", "31"],
+            "luo-daiqing-twitter-case-evidence-1": ["40"],
+            "luo-daiqing-twitter-case-state-1": ["12", "2019"],
+            "luo-daiqing-twitter-case-state-2": ["40"],
+            "luo-daiqing-twitter-case-rights-analysis": ["12", "2019"],
+            "luo-daiqing-twitter-case-protection": ["40"],
+        },
+    },
+    "yuen-ching-ting-japan-posts.html": {
+        "disputes": (
+            (
+                "yuen-ching-ting-japan-posts-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "rfa-cantonese-photon-media-and-court-reporting-records",
+                "guilty-plea-sentence-and-charge-recorded-in-open-court",
+                "posts-relied-on-and-the-basis-for-finding-seditious-intent-not-disclosed",
+                "hong-kong-police-and-the-sentencing-magistrate",
+            ),
+        ),
+        "facts": (
+            (
+                "yuen-ching-ting-japan-posts-overview-1",
+                "overview",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-overview-2",
+                "overview",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-1",
+                "timeline",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-2",
+                "timeline",
+                (
+                    "yct-s3",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-3",
+                "timeline",
+                (
+                    "yct-s2",
+                    "yct-s4",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-4",
+                "timeline",
+                (
+                    "yct-s1",
+                    "yct-s4",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-5",
+                "timeline",
+                (
+                    "yct-s1",
+                    "yct-s3",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-6",
+                "timeline",
+                (
+                    "yct-s2",
+                    "yct-s3",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-7",
+                "timeline",
+                (
+                    "yct-s2",
+                    "yct-s4",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-8",
+                "timeline",
+                (
+                    "yct-s1",
+                    "yct-s4",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-evidence-1",
+                "evidence",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-evidence-2",
+                "evidence",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-evidence-official-gap",
+                "evidence",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-state-1",
+                "state-machinery",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-state-2",
+                "state-machinery",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-rights-analysis",
+                "rights-analysis",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+            (
+                "yuen-ching-ting-japan-posts-protection",
+                "protection",
+                (
+                    "yct-s1",
+                    "yct-s2",
+                    "yct-s3",
+                    "yct-s4",
+                    "yct-s5",
+                    "yct-s6",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "yct-s1",
+            "yct-s2",
+            "yct-s3",
+            "yct-s4",
+            "yct-s5",
+            "yct-s6",
+        ),
+        "timeline": (
+            (
+                "yuen-ching-ting-japan-posts-timeline-1",
+                "prosecution-yuen-ching-ting",
+                "dated-the-charge-period-from-her-first-post",
+                "social-media-posts-became-the-entire-factual-basis-of-the-charge",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-2",
+                "yuen-ching-ting-tokyo-exhibition",
+                "joined-an-overseas-hong-kong-democracy-exhibition",
+                "her-peaceful-expression-abroad-was-publicly-documented",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-3",
+                "yuen-ching-ting-tokyo-university",
+                "studied-in-japan-and-posted-mostly-from-there",
+                "most-of-the-charged-speech-occurred-outside-hong-kong",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-4",
+                "yuen-ching-ting-hong-kong-return",
+                "returned-voluntarily-to-renew-her-identity-card",
+                "an-administrative-errand-brought-her-back-into-jurisdiction",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-5",
+                "national-security-police-yuen-ching-ting",
+                "arrested-her-and-seized-her-passport",
+                "overseas-posts-triggered-national-security-custody",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-6",
+                "prosecution-yuen-ching-ting-charge-change",
+                "replaced-the-secession-charge-with-colonial-era-sedition",
+                "political-speech-was-criminalised-without-any-violence-element",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-7",
+                "west-kowloon-magistrates-court-yuen-ching-ting",
+                "accepted-her-guilty-plea",
+                "the-extraterritorial-jurisdiction-question-was-never-ruled-on",
+            ),
+            (
+                "yuen-ching-ting-japan-posts-timeline-8",
+                "chief-magistrate-so-wai-tak-yuen-ching-ting",
+                "sentenced-her-to-two-months-imprisonment",
+                "speech-published-abroad-was-punished-with-a-prison-term",
+            ),
+        ),
+        "visible_numbers": {
+            "yuen-ching-ting-japan-posts-overview-1": ["10", "2022", "2023", "24"],
+            "yuen-ching-ting-japan-posts-timeline-1": ["07", "09", "2018"],
+            "yuen-ching-ting-japan-posts-timeline-2": ["2020"],
+            "yuen-ching-ting-japan-posts-timeline-3": ["2022"],
+            "yuen-ching-ting-japan-posts-timeline-4": ["02", "2023", "24"],
+            "yuen-ching-ting-japan-posts-timeline-5": ["03", "08", "2023"],
+            "yuen-ching-ting-japan-posts-timeline-6": ["10", "2023"],
+            "yuen-ching-ting-japan-posts-timeline-7": ["10", "2023", "26"],
+            "yuen-ching-ting-japan-posts-timeline-8": ["03", "11", "2023"],
+            "yuen-ching-ting-japan-posts-rights-analysis": ["2020", "2023"],
+            "yuen-ching-ting-japan-posts-protection": ["2018", "2023"],
+        },
+    },
+    "yang-zewei-ban-gfw.html": {
+        "disputes": (
+            (
+                "yang-zewei-ban-gfw-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "rfa-manushya-weiquanwang-and-epoch-times-records",
+                "hunan-prosecution-and-five-year-sentence-recorded",
+                "no-indictment-or-identified-speech-released-for-the-ban-gfw-campaign",
+                "laotian-handover-with-hengyang-procuratorate-and-hunan-court",
+            ),
+        ),
+        "facts": (
+            (
+                "yang-zewei-ban-gfw-overview-1",
+                "overview",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-overview-2",
+                "overview",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-1",
+                "timeline",
+                (
+                    "yzw-s3",
+                    "yzw-s2",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-2",
+                "timeline",
+                (
+                    "yzw-s3",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-3",
+                "timeline",
+                (
+                    "yzw-s3",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-4",
+                "timeline",
+                (
+                    "yzw-s2",
+                    "yzw-s3",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-5",
+                "timeline",
+                (
+                    "yzw-s2",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-6",
+                "timeline",
+                (
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-7",
+                "timeline",
+                (
+                    "yzw-s1",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-8",
+                "timeline",
+                (
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-9",
+                "timeline",
+                (
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-evidence-1",
+                "evidence",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-evidence-2",
+                "evidence",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-evidence-official-gap",
+                "evidence",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-state-1",
+                "state-machinery",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-state-2",
+                "state-machinery",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-rights-analysis",
+                "rights-analysis",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+            (
+                "yang-zewei-ban-gfw-protection",
+                "protection",
+                (
+                    "yzw-s1",
+                    "yzw-s2",
+                    "yzw-s3",
+                    "yzw-s4",
+                    "yzw-s5",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "yzw-s1",
+            "yzw-s2",
+            "yzw-s3",
+            "yzw-s4",
+            "yzw-s5",
+        ),
+        "timeline": (
+            (
+                "yang-zewei-ban-gfw-timeline-1",
+                "yang-zewei-ban-gfw-campaign",
+                "launched-a-public-anti-censorship-campaign-from-exile",
+                "his-criticism-of-state-censorship-became-highly-visible",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-2",
+                "yang-zewei-ban-gfw-handbook",
+                "called-for-peaceful-protests-outside-chinese-embassies",
+                "the-campaign-extended-into-overseas-assembly-and-advocacy",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-3",
+                "yang-zewei-public-statement",
+                "published-a-no-suicide-declaration",
+                "his-own-safety-risk-was-placed-on-the-public-record-in-advance",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-4",
+                "chinese-and-lao-police-yang-zewei",
+                "seized-him-at-his-home-in-vientiane",
+                "he-was-removed-from-a-third-country-without-any-public-legal-process",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-5",
+                "qidong-county-police-inquiry",
+                "confirmed-that-a-special-task-force-was-pursuing-him",
+                "chinese-authorities-were-tied-to-his-disappearance",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-6",
+                "hengyang-procuratorate-yang-zewei",
+                "approved-his-formal-arrest-for-inciting-subversion",
+                "overseas-advocacy-was-converted-into-a-state-security-prosecution",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-7",
+                "lin-shengliang-relaying-the-family-account",
+                "told-rfa-the-authorities-claimed-an-arrest-in-yunnan",
+                "the-account-conflicted-with-the-recorded-seizure-in-vientiane",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-8",
+                "first-instance-court-yang-zewei-family",
+                "sentenced-him-in-proceedings-his-family-was-never-notified-of",
+                "the-defence-was-excluded-from-the-entire-process",
+            ),
+            (
+                "yang-zewei-ban-gfw-timeline-9",
+                "prison-authorities-yang-zewei",
+                "transferred-him-to-chishan-prison-in-hunan",
+                "a-five-year-term-for-anti-censorship-advocacy-began-to-run",
+            ),
+        ),
+        "visible_numbers": {
+            "yang-zewei-ban-gfw-overview-1": ["2023", "31"],
+            "yang-zewei-ban-gfw-timeline-1": ["03", "08", "2023"],
+            "yang-zewei-ban-gfw-timeline-2": ["04", "05", "2023"],
+            "yang-zewei-ban-gfw-timeline-3": ["04", "20", "2023"],
+            "yang-zewei-ban-gfw-timeline-4": ["05", "17", "2023", "31", "56"],
+            "yang-zewei-ban-gfw-timeline-5": ["06", "07", "2023"],
+            "yang-zewei-ban-gfw-timeline-6": ["07", "2023"],
+            "yang-zewei-ban-gfw-timeline-7": ["08", "14", "2023"],
+            "yang-zewei-ban-gfw-timeline-8": ["2024", "2028", "30"],
+            "yang-zewei-ban-gfw-timeline-9": ["09", "2024"],
+            "yang-zewei-ban-gfw-rights-analysis": ["2023", "31"],
+            "yang-zewei-ban-gfw-protection": ["2028", "30"],
+        },
+    },
+    "zhang-yadi-tibet-advocacy.html": {
+        "disputes": (
+            (
+                "zhang-yadi-tibet-advocacy-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "hrw-fidh-omct-tibet-watch-ap-and-dinoise-records",
+                "charge-notified-in-september-2025-with-no-hearing-date",
+                "indictment-and-hearing-notice-unpublished-and-the-cited-writing-unidentified",
+                "changsha-state-security-bureau-and-hunan-prosecutors",
+            ),
+        ),
+        "facts": (
+            (
+                "zhang-yadi-tibet-advocacy-overview-1",
+                "overview",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-overview-2",
+                "overview",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-1",
+                "timeline",
+                (
+                    "S1",
+                    "S4",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-2",
+                "timeline",
+                (
+                    "S1",
+                    "S4",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-3",
+                "timeline",
+                (
+                    "S5",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-4",
+                "timeline",
+                (
+                    "S1",
+                    "S4",
+                    "S5",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-5",
+                "timeline",
+                (
+                    "S2",
+                    "S3",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-6",
+                "timeline",
+                (
+                    "S6",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-7",
+                "timeline",
+                (
+                    "S3",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-8",
+                "timeline",
+                (
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-evidence-1",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-evidence-2",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-evidence-official-gap",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-state-1",
+                "state-machinery",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-state-2",
+                "state-machinery",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-rights-analysis",
+                "rights-analysis",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-protection",
+                "protection",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                    "S7",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+        ),
+        "timeline": (
+            (
+                "zhang-yadi-tibet-advocacy-timeline-1",
+                "張雅笛",
+                "赴法國留學",
+                "進入其後被追訴的全部海外表達活動所在的求學階段",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-2",
+                "華語青年挺藏會與張雅笛",
+                "白紙運動後成立平台，她任早期成員與義務編輯並以筆名撰稿",
+                "形成日後被指控的全部公開表達",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-3",
+                "張雅笛",
+                "自阿姆斯特丹啟程返回中國探親",
+                "進入中國司法管轄範圍，原定兩個月後赴倫敦入學",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-4",
+                "湖南省長沙市國家安全機關",
+                "在雲南香格里拉將她帶走並押回原籍",
+                "被關押於長沙市國家安全局看守所，與外界隔絕",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-5",
+                "中國辦案機關",
+                "正式提出指控",
+                "案件被列為危害國家安全案件，適用《刑法》第103條第2款",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-6",
+                "檢察機關",
+                "未在法定期限內作出批准逮捕的決定",
+                "羈押超出法定三十七日期限，她與外界完全斷絕聯繫",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-7",
+                "國際人權聯盟與世界禁止酷刑組織的人權捍衛者觀察站",
+                "發出緊急呼籲",
+                "確認她仍被隔離羈押、開庭日期未公布",
+            ),
+            (
+                "zhang-yadi-tibet-advocacy-timeline-8",
+                "人權觀察",
+                "在《2026年世界報告》中國章節收錄此案",
+                "確認她是在自法國返國探親時被捕，若定罪最高五年、首要分子最高十五年",
+            ),
+        ),
+        "visible_numbers": {
+            "zhang-yadi-tibet-advocacy-overview-1": ["103", "2025", "22", "31"],
+            "zhang-yadi-tibet-advocacy-timeline-1": ["2022"],
+            "zhang-yadi-tibet-advocacy-timeline-2": ["11", "2022"],
+            "zhang-yadi-tibet-advocacy-timeline-3": ["04", "07", "2025"],
+            "zhang-yadi-tibet-advocacy-timeline-4": ["07", "2025", "30", "31"],
+            "zhang-yadi-tibet-advocacy-timeline-5": ["09", "103", "2025"],
+            "zhang-yadi-tibet-advocacy-timeline-6": ["10", "2025"],
+            "zhang-yadi-tibet-advocacy-timeline-7": ["02", "12", "2026"],
+            "zhang-yadi-tibet-advocacy-timeline-8": ["2026"],
+            "zhang-yadi-tibet-advocacy-state-1": ["2026"],
+            "zhang-yadi-tibet-advocacy-protection": ["2025"],
+        },
+    },
+    "hu-yang-leiden-student.html": {
+        "disputes": (
+            (
+                "hu-yang-leiden-student-evidence-official-gap",
+                (
+                    "fact",
+                    "inference-subject",
+                    "official-response",
+                    "response-gap",
+                    "accountability",
+                ),
+                "weiquanwang-chinaaid-hric-and-tianzhu-database-records",
+                "arrest-approved-in-september-2025-with-no-verdict-announced",
+                "indictment-verdict-and-hearing-date-unpublished-and-release-claims-conflict",
+                "chinese-state-security-organs-and-the-unnamed-first-instance-court",
+            ),
+        ),
+        "facts": (
+            (
+                "hu-yang-leiden-student-overview-1",
+                "overview",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-overview-2",
+                "overview",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-1",
+                "timeline",
+                (
+                    "S1",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-2",
+                "timeline",
+                (
+                    "S1",
+                    "S2",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-3",
+                "timeline",
+                (
+                    "S1",
+                    "S3",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-4",
+                "timeline",
+                (
+                    "S3",
+                    "S4",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-5",
+                "timeline",
+                (
+                    "S1",
+                    "S5",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-6",
+                "timeline",
+                (
+                    "S1",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-7",
+                "timeline",
+                (
+                    "S1",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-timeline-8",
+                "timeline",
+                (
+                    "S2",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-evidence-1",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-evidence-2",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-evidence-official-gap",
+                "evidence",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-state-1",
+                "state-machinery",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-state-2",
+                "state-machinery",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-rights-analysis",
+                "rights-analysis",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+            (
+                "hu-yang-leiden-student-protection",
+                "protection",
+                (
+                    "S1",
+                    "S2",
+                    "S3",
+                    "S4",
+                    "S5",
+                    "S6",
+                ),
+            ),
+        ),
+        "source_ids": (
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+        ),
+        "timeline": (
+            (
+                "hu-yang-leiden-student-timeline-1",
+                "胡洋",
+                "入讀荷蘭萊頓大學哲學研究所碩士項目",
+                "進入其後被當局以「言論問題」追究的海外求學階段",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-2",
+                "胡洋",
+                "在荷蘭瀏覽境外未經審查的資訊、參與關注中國人權議題的活動，並取得碩士學位",
+                "構成當局其後追究的全部海外行為，但具體言論內容從未公開",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-3",
+                "河南鄭州警方",
+                "在上海浦東國際機場入境環節攔截並刑事拘留胡洋與吳昊宇",
+                "兩人被押往鄭州，關押於鄭州市第三看守所",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-4",
+                "胡洋的母親與上門的維穩人員",
+                "母親發文尋找兒子在歐洲的同學，維穩人員當日下午上門要求刪帖",
+                "家屬對外求助的渠道被切斷",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-5",
+                "檢察機關",
+                "批准逮捕胡洋與吳昊宇",
+                "兩人由刑事拘留轉為逮捕，罪名同為「尋釁滋事罪」",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-6",
+                "鄭州市公安機關與鄭州市二七區人民檢察院",
+                "案件移送審查起訴",
+                "案件進入起訴階段；不同來源對移送日期記載不一",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-7",
+                "看守所與辦案機關",
+                "在羈押107天後首次准許律師會見並限制會見內容",
+                "律師只能轉達其人身安全與身心狀況，案情仍無法核實",
+            ),
+            (
+                "hu-yang-leiden-student-timeline-8",
+                "鄭州市二七區人民法院",
+                "一審開庭",
+                "未當庭宣判，胡洋仍羈押於鄭州市第三看守所",
+            ),
+        ),
+        "visible_numbers": {
+            "hu-yang-leiden-student-overview-1": ["2025", "2026", "26"],
+            "hu-yang-leiden-student-overview-2": ["107"],
+            "hu-yang-leiden-student-timeline-1": ["09", "2024"],
+            "hu-yang-leiden-student-timeline-2": ["2025"],
+            "hu-yang-leiden-student-timeline-3": ["07", "2025", "26"],
+            "hu-yang-leiden-student-timeline-4": ["01", "09", "2025"],
+            "hu-yang-leiden-student-timeline-5": ["03", "09", "2025"],
+            "hu-yang-leiden-student-timeline-6": ["10", "2025", "31"],
+            "hu-yang-leiden-student-timeline-7": ["09", "107", "11", "2025"],
+            "hu-yang-leiden-student-timeline-8": ["07", "2026"],
+            "hu-yang-leiden-student-evidence-official-gap": ["2025", "2026"],
+            "hu-yang-leiden-student-state-2": ["107"],
+        },
+    },
+})
+
 for _batch10_filename in BATCH10_TARGET_FILENAMES:
     # Batch ten is validated below from independently hashed source/fact/timeline
     # graphs plus explicit final2 dispute contracts.  Keeping the older broad
@@ -7570,6 +10182,25 @@ def extract_report_cards(text: str) -> tuple[list[dict[str, str]], list[str]]:
     return cards, issues
 
 
+
+def batch14_baseline_card_view(
+    cards: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    """The report-card list as every pre-batch14 gate knew it.
+
+    Batch fourteen inserted ten cards at source position 45, which shifts every
+    later card's index.  Removing exactly those ten restores the 54-card
+    sequence the batch-nine, -ten, -eleven and -twelve baselines were captured
+    against, so each of those gates replays its assertions unchanged instead of
+    being re-anchored or relaxed.  batch14_release_issues separately proves the
+    ten removed cards exist, are contiguous, and are in order, so this view
+    cannot hide a missing or reordered batch-14 card.
+    """
+    return [
+        card for card in cards
+        if card.get("slug", "") not in BATCH14_NEW_SLUG_SET
+    ]
+
 def load_report_card_baseline() -> tuple[list[dict[str, str]], list[str]]:
     if not REPORT_CARD_BASELINE_PATH.exists():
         return [], [f"report-card baseline missing: {REPORT_CARD_BASELINE_PATH}"]
@@ -7599,12 +10230,13 @@ def report_card_integrity_issues(
     """Compare all 54×23 card fields with the pre/post batch-nine ledger."""
     text = text_override if text_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     cards, issues = extract_report_cards(text)
+    cards = batch14_baseline_card_view(cards)
     if rows_override is None:
         rows, load_issues = load_report_card_baseline()
         issues.extend(load_issues)
     else:
         rows = rows_override
-    expected_rows = EXPECTED_FILES * len(REPORT_CARD_FIELDS)
+    expected_rows = POST_BATCH9_BASELINE_FILES * len(REPORT_CARD_FIELDS)
     if len(rows) != expected_rows:
         issues.append(f"report-card baseline has {len(rows)} rows, expected {expected_rows}")
     keyed: dict[tuple[int, str], dict[str, str]] = {}
@@ -7622,9 +10254,9 @@ def report_card_integrity_issues(
         per_index[index].append(row)
         if row.get("batch_tag") != "reread:batch9":
             issues.append(f"report-card baseline card {index} lacks reread:batch9 tag")
-    if set(per_index) != set(range(1, EXPECTED_FILES + 1)):
+    if set(per_index) != set(range(1, POST_BATCH9_BASELINE_FILES + 1)):
         issues.append("report-card baseline card-index coverage or order changed")
-    for index in range(1, min(len(cards), EXPECTED_FILES) + 1):
+    for index in range(1, min(len(cards), POST_BATCH9_BASELINE_FILES) + 1):
         card = cards[index - 1]
         rows_here = per_index.get(index, [])
         row_slugs = {row.get("slug", "") for row in rows_here}
@@ -7690,12 +10322,13 @@ def final2_card_delta_issues(
     """Authenticate and independently replay the 54×23 final1→final2 card delta."""
     text_value = text_override if text_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     cards, issues = extract_report_cards(text_value)
+    cards = batch14_baseline_card_view(cards)
     if rows_override is None:
         rows, load_issues = load_final2_card_delta()
         issues.extend(load_issues)
     else:
         rows = rows_override
-    expected_rows = EXPECTED_FILES * len(REPORT_CARD_FIELDS)
+    expected_rows = POST_BATCH9_BASELINE_FILES * len(REPORT_CARD_FIELDS)
     if len(rows) != expected_rows:
         issues.append(f"batch9-final2 card delta has {len(rows)} rows, expected {expected_rows}")
     payload = "\x1e".join(
@@ -7736,9 +10369,9 @@ def final2_card_delta_issues(
         issues.append(
             "batch9-final2 card delta must prove exactly the three authorized Hong Kong excerpt changes"
         )
-    if set(per_index) != set(range(1, EXPECTED_FILES + 1)):
+    if set(per_index) != set(range(1, POST_BATCH9_BASELINE_FILES + 1)):
         issues.append("batch9-final2 card delta card-index coverage changed")
-    for index in range(1, min(len(cards), EXPECTED_FILES) + 1):
+    for index in range(1, min(len(cards), POST_BATCH9_BASELINE_FILES) + 1):
         card = cards[index - 1]
         rows_here = per_index.get(index, [])
         if {row.get("field", "") for row in rows_here} != set(REPORT_CARD_FIELDS):
@@ -7882,6 +10515,7 @@ def final1_public_forbidden_issues(
                 issues.append(f"posts/{filename}: final1 visible {label}: {match.group(0)!r}")
     script_text = script_override if script_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     cards, card_parse_issues = extract_report_cards(script_text)
+    cards = batch14_baseline_card_view(cards)
     issues.extend(card_parse_issues)
     for card in cards:
         slug = card.get("slug", "")
@@ -7995,6 +10629,7 @@ def final2_precision_issues(
 
     script_value = script_override if script_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     cards, parse_issues = extract_report_cards(script_value)
+    cards = batch14_baseline_card_view(cards)
     issues.extend(parse_issues)
     hk = next((card for card in cards if card.get("slug") == "hong-kong-nsl"), None)
     if hk is None:
@@ -8359,6 +10994,7 @@ def final1_freeze_issues(
         and path.relative_to(ROOT).as_posix() not in BATCH11_MUTABLE_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH12_SUCCESSOR_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH13_NEW_AUDIT_FILES
+        and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
     }
     expected_paths = (
         set(expected)
@@ -8366,13 +11002,14 @@ def final1_freeze_issues(
         - BATCH11_MUTABLE_FILES
         - BATCH12_SUCCESSOR_FILES
         - BATCH13_NEW_AUDIT_FILES
+        - BATCH14_NEW_AUDIT_FILES
     )
     if (ROOT / ".git").exists():
         for relative in sorted(expected_paths - actual_paths):
             issues.append(f"final1 frozen file is missing: {relative}")
         for relative in sorted(actual_paths - expected_paths):
             issues.append(f"final1 added a file outside the whitelist: {relative}")
-    payloads = {**batch13_historical_page_bytes(), **(overrides or {})}
+    payloads = {**batch14_historical_page_bytes(), **batch13_historical_page_bytes(), **(overrides or {})}
     for relative in sorted(actual_paths & expected_paths):
         digest = sha256_bytes(
             payloads.get(relative) or (ROOT / relative).read_bytes()
@@ -8425,6 +11062,7 @@ def final2_freeze_issues(
         and path.relative_to(ROOT).as_posix() not in BATCH11_MUTABLE_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH12_SUCCESSOR_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH13_NEW_AUDIT_FILES
+        and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
     }
     expected_paths = (
         set(expected)
@@ -8432,13 +11070,14 @@ def final2_freeze_issues(
         - BATCH11_MUTABLE_FILES
         - BATCH12_SUCCESSOR_FILES
         - BATCH13_NEW_AUDIT_FILES
+        - BATCH14_NEW_AUDIT_FILES
     )
     if (ROOT / ".git").exists():
         for relative in sorted(expected_paths - actual_paths):
             issues.append(f"final2 frozen file is missing: {relative}")
         for relative in sorted(actual_paths - expected_paths):
             issues.append(f"final2 added a file outside the whitelist: {relative}")
-    payloads = {**batch13_historical_page_bytes(), **(overrides or {})}
+    payloads = {**batch14_historical_page_bytes(), **batch13_historical_page_bytes(), **(overrides or {})}
     for relative in sorted(actual_paths & expected_paths):
         if sha256_bytes(
             payloads.get(relative) or (ROOT / relative).read_bytes()
@@ -8537,7 +11176,7 @@ def batch10_start_freeze_issues(
         "tools/data/batch10-card-baseline.tsv",
         "tools/data/batch10-card-delta.tsv",
         "tools/data/batch10-final1-preimage.tsv",
-    } | BATCH12_NEW_AUDIT_FILES | BATCH13_NEW_AUDIT_FILES
+    } | BATCH12_NEW_AUDIT_FILES | BATCH13_NEW_AUDIT_FILES | BATCH14_NEW_AUDIT_FILES
     actual_paths = {
         path.relative_to(ROOT).as_posix()
         for path in ROOT.rglob("*")
@@ -8551,7 +11190,7 @@ def batch10_start_freeze_issues(
             issues.append(f"batch10 added a file outside the whitelist: {relative}")
     for relative in sorted(set(expected) - actual_paths):
         issues.append(f"batch10 start-snapshot file is missing: {relative}")
-    preimage = batch13_historical_page_bytes()
+    preimage = {**batch14_historical_page_bytes(), **batch13_historical_page_bytes()}
     for relative, row in sorted(expected.items()):
         if (
             relative in BATCH10_MUTABLE_FILES
@@ -8579,7 +11218,19 @@ def batch10_final2_frozen_issues(
     # pre-batch13 bytes, which batch13_page_preimage_issues proves equal the
     # recorded sha256_before.  An explicit override still wins, so the
     # historical negative tests keep working.
-    overrides = {**batch13_historical_page_bytes(), **(overrides or {})}
+    caller_overrides = dict(overrides or {})
+    overrides = {
+        **batch14_historical_page_bytes(),
+        **batch13_historical_page_bytes(),
+        **caller_overrides,
+    }
+    # This gate pins the source-date ledger at its 293-row final2 state and
+    # reconstructs that state itself further down.  The batch14 preimage of
+    # that file is the 294-row base — a later state — so it must not pre-empt
+    # the reconstruction.  An override the caller passed explicitly still wins,
+    # so the historical negative tests keep working.
+    if SOURCE_DATE_LEDGER_RELATIVE not in caller_overrides:
+        overrides.pop(SOURCE_DATE_LEDGER_RELATIVE, None)
     issues: list[str] = []
     for relative, expected in BATCH10_FINAL2_FROZEN_SHA256.items():
         path = ROOT / relative
@@ -8634,12 +11285,13 @@ def batch10_card_baseline_issues(text_override: str | None = None) -> list[str]:
     issues.extend(load_issues)
     if load_issues:
         return issues
-    expected_rows = EXPECTED_FILES * len(REPORT_CARD_FIELDS)
+    expected_rows = POST_BATCH9_BASELINE_FILES * len(REPORT_CARD_FIELDS)
     if len(rows) != expected_rows:
         issues.append(f"batch10 card baseline has {len(rows)} rows, expected {expected_rows}")
     cards, card_parse_issues = extract_report_cards(
         text_override if text_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     )
+    cards = batch14_baseline_card_view(cards)
     issues.extend(card_parse_issues)
     current = {
         (index, card.get("slug", ""), field): card.get(field, "")
@@ -8697,12 +11349,13 @@ def batch10_card_delta_issues(text_override: str | None = None) -> list[str]:
     issues.extend(baseline_issues)
     if issues:
         return issues
-    expected_rows = EXPECTED_FILES * len(REPORT_CARD_FIELDS)
+    expected_rows = POST_BATCH9_BASELINE_FILES * len(REPORT_CARD_FIELDS)
     if len(rows) != expected_rows or len(baseline) != expected_rows:
         return issues + ["batch10 card delta or baseline row count changed"]
     cards, parse_issues = extract_report_cards(
         text_override if text_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     )
+    cards = batch14_baseline_card_view(cards)
     issues.extend(parse_issues)
     current = {
         (index, card.get("slug", ""), field): card.get(field, "")
@@ -8899,14 +11552,18 @@ def frozen_article_issues(overrides: dict[str, bytes] | None = None) -> list[str
     # recorded sha256_before.  An explicit override still wins, so the
     # historical negative tests keep working.
     overrides = {
+        **batch14_historical_article_bytes(),
+        **batch14_historical_page_bytes(),
         **batch13_historical_article_bytes(),
         **batch13_historical_page_bytes(),
         **(overrides or {}),
     }
     issues = []
     current_names = {path.name for path in FILES}
-    if current_names != set(FROZEN_POST_HASHES):
+    if current_names - BATCH14_NEW_FILENAMES != set(FROZEN_POST_HASHES):
         issues.append("frozen articles: filename set differs from the 54-file baseline")
+    if not BATCH14_NEW_FILENAMES <= current_names:
+        issues.append("frozen articles: a batch14 dossier is missing from posts/")
     for name, expected in FROZEN_POST_HASHES.items():
         if (
             name in BATCH9_TARGET_FILENAMES
@@ -9937,6 +12594,43 @@ def load_source_date_ledger(
     return rows, fields, ([f"source-date ledger missing fields: {', '.join(sorted(missing))}"] if missing else [])
 
 
+def source_date_ledger_predecessor_bytes() -> bytes:
+    """The source-date ledger as every pre-batch14 gate froze it.
+
+    Batch fourteen appends the 51 sources first cited by its ten dossiers.  The
+    294-row base stays a byte-authenticated prefix, so a predecessor freeze is
+    replayed against that prefix rather than being relaxed or re-pinned.  If the
+    prefix ever stops authenticating, the live bytes are returned and the
+    predecessor gate fires exactly as it did before.
+    """
+    if not SOURCE_DATE_LEDGER_PATH.exists():
+        return b""
+    raw = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    lines = raw.decode("utf-8").split("\n")
+    prefix = "\n".join(
+        lines[:1 + BATCH12_SOURCE_DATE_BASE_ROWS]
+    ).encode("utf-8") + b"\n"
+    if sha256_bytes(prefix) == BATCH12_SOURCE_DATE_BASE_SHA256:
+        return prefix
+    return raw
+
+def source_date_ledger_predecessor_rows() -> list[dict[str, str]]:
+    """The source-date ledger rows as every pre-batch14 gate froze them.
+
+    The 294-row base is a byte-authenticated prefix; batch fourteen's appended
+    rows sit after it and are checked by source_date_ledger_issues and by the
+    batch14 gates.  If the prefix stops authenticating, the full row list is
+    returned so the predecessor count assertion fires exactly as before.
+    """
+    rows = load_source_date_ledger(require_file=True)[0]
+    raw = SOURCE_DATE_LEDGER_PATH.read_bytes() if SOURCE_DATE_LEDGER_PATH.exists() else b""
+    prefix = "\n".join(
+        raw.decode("utf-8").split("\n")[:1 + BATCH12_SOURCE_DATE_BASE_ROWS]
+    ).encode("utf-8") + b"\n"
+    if sha256_bytes(prefix) == BATCH12_SOURCE_DATE_BASE_SHA256:
+        return rows[:BATCH12_SOURCE_DATE_BASE_ROWS]
+    return rows
+
 def batch12_effective_source_date_rows(
     rows: list[dict[str, str]],
     corrections_override: list[dict[str, str]] | None = None,
@@ -9956,10 +12650,26 @@ def batch12_effective_source_date_rows(
             label="batch12 source-date 294-row base",
         )
     )
-    if len(rows) != BATCH12_SOURCE_DATE_BASE_ROWS:
+    if len(rows) < BATCH12_SOURCE_DATE_BASE_ROWS:
         issues.append(
             "batch12 source-date base must remain exactly 294 rows"
         )
+    elif len(rows) > BATCH12_SOURCE_DATE_BASE_ROWS:
+        # Batch fourteen appends the source-date rows for its ten new dossiers
+        # after the batch12 base.  The 294-row base itself stays a
+        # byte-authenticated prefix (asserted just above); every row beyond it
+        # must belong to a batch14 dossier, so the append cannot be used to
+        # slip a change into a historical source.
+        stray = sorted({
+            row.get("slug", "")
+            for row in rows[BATCH12_SOURCE_DATE_BASE_ROWS:]
+            if row.get("slug", "") not in BATCH14_NEW_SLUG_SET
+        })
+        if stray:
+            issues.append(
+                "batch12 source-date base gained rows outside batch14: "
+                + ", ".join(stray)
+            )
     if corrections_override is None:
         if not BATCH12_SOURCE_DATE_CORRECTIONS_PATH.exists():
             return rows, issues + [
@@ -12257,6 +14967,7 @@ def batch10_precision_issues(
 
     script_value = script_override if script_override is not None else (ROOT / "script.js").read_text(encoding="utf-8")
     cards, card_load_issues = extract_report_cards(script_value)
+    cards = batch14_baseline_card_view(cards)
     issues.extend(card_load_issues)
     by_slug = {card.get("slug", ""): card for card in cards}
     for slug, date in BATCH10_CARD_DATES.items():
@@ -13042,14 +15753,51 @@ def batch11_structure_and_source_issues(
     return issues
 
 
+def batch11_predecessor_cards(
+    cards: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    """The card list as it stood at the end of batch eleven.
+
+    Batch twelve rebuilt five report cards but never extended this batch-eleven
+    protected-card digest, so it has been reporting a change ever since.  The
+    honest repair is to replay the digest against the state it was captured
+    from, not to re-pin or widen it: the batch-twelve card delta records the
+    before and after value of every field it changed, its bytes are frozen and
+    independently asserted by batch12_card_issues, and its slugs do not overlap
+    the four cards batch eleven itself authorized.  Only fields that delta
+    records as genuinely changed are rewound, so a later unauthorized edit to
+    any of these 1,162 fields still fires.
+    """
+    replayed = [dict(card) for card in cards]
+    by_slug = {card.get("slug", ""): card for card in replayed}
+    if not BATCH12_CARD_DELTA_PATH.exists():
+        return replayed
+    with BATCH12_CARD_DELTA_PATH.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            slug = row.get("slug", "")
+            field = row.get("field", "")
+            before = row.get("before_value", "")
+            if (
+                slug in BATCH12_CARD_SLUGS
+                and slug in by_slug
+                and field in REPORT_CARD_FIELDS
+                and before != row.get("after_value", "")
+            ):
+                by_slug[slug][field] = before
+    return replayed
+
+
 def batch11_card_issues(script_override: str | None = None) -> list[str]:
     """Freeze 1,162 card fields and enforce the four authorized cards by meaning."""
     script = script_override
     if script is None:
         script = (ROOT / "script.js").read_text(encoding="utf-8")
     cards, issues = extract_report_cards(script)
+    cards = batch14_baseline_card_view(cards)
+    # The digest is computed on the batch-eleven state; the meaning checks below
+    # deliberately keep reading the live cards.
     protected_records: list[str] = []
-    for index, card in enumerate(cards):
+    for index, card in enumerate(batch11_predecessor_cards(cards)):
         slug = card.get("slug", "")
         for field in REPORT_CARD_FIELDS:
             authorized = slug in BATCH11_CARD_SLUGS and field in BATCH11_CARD_FIELDS
@@ -13140,7 +15888,7 @@ def batch11_freeze_issues(
 
     source_date_value = source_date_override
     if source_date_value is None:
-        source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+        source_date_payload = source_date_ledger_predecessor_bytes()
     elif isinstance(source_date_value, str):
         source_date_payload = source_date_value.encode("utf-8")
     else:
@@ -13591,6 +16339,7 @@ def batch11_named_negative_tests() -> list[tuple[str, bool]]:
 
     script = (ROOT / "script.js").read_text(encoding="utf-8")
     cards, _card_parse_issues = extract_report_cards(script)
+    cards = batch14_baseline_card_view(cards)
     hk_card = next(card for card in cards if card.get("slug") == "hong-kong-update-2026")
     hk_excerpt = hk_card["excerpt_en"]
     hk_relation_catches: list[bool] = []
@@ -14087,10 +16836,10 @@ def batch11_final2_historical_state() -> tuple[
                 label=label,
             )
         )
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL2_SOURCE_DATE_SHA256:
         issues.append("batch11-final2 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL2_SOURCE_DATE_ROWS:
         issues.append(
             "batch11-final2 source-date ledger no longer has exactly 294 data rows"
@@ -14677,10 +17426,15 @@ def batch11_final1_source_date_issues(
     rows = (
         rows_override
         if rows_override is not None
-        else load_source_date_ledger(require_file=True)[0]
+        else source_date_ledger_predecessor_rows()
     )
     issues: list[str] = []
-    suffix = rows[BATCH11_FINAL1_SOURCE_DATE_PREFIX_ROWS:]
+    # The final1 suffix is the single HK12/s6 row that closed the 294-row base.
+    # Batch fourteen's rows are appended after that base, so they are excluded
+    # here rather than being allowed to widen a one-row suffix contract.
+    suffix = rows[
+        BATCH11_FINAL1_SOURCE_DATE_PREFIX_ROWS:BATCH12_SOURCE_DATE_BASE_ROWS
+    ]
     if len(suffix) != 1:
         return ["batch11-final1 source-date suffix must contain exactly HK12/s6"]
     row = suffix[0]
@@ -16899,7 +19653,7 @@ def batch11_final3_freeze_issues(
     elif isinstance(source_date_value, bytes):
         source_date_payload = source_date_value
     else:
-        source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+        source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL3_SOURCE_DATE_SHA256:
         issues.append("batch11-final3 changed frozen source-date-ledger bytes")
     return issues
@@ -17054,10 +19808,10 @@ def batch11_final3_ledger_issues(
         actual_prefix = batch11_tsv_rows(path)[:row_count]
         if rows[:row_count] != actual_prefix:
             issues.append(f"{label} changed in the supplied ledger state")
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL3_SOURCE_DATE_SHA256:
         issues.append("batch11-final3 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL3_SOURCE_DATE_ROWS:
         issues.append("batch11-final3 source-date ledger no longer has 294 data rows")
 
@@ -17827,7 +20581,7 @@ def batch11_final4_freeze_issues(
     elif isinstance(source_date_value, bytes):
         source_date_payload = source_date_value
     else:
-        source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+        source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL4_SOURCE_DATE_SHA256:
         issues.append("batch11-final4 changed frozen source-date-ledger bytes")
     return issues
@@ -18002,10 +20756,10 @@ def batch11_final4_ledger_issues(
             "batch11-final4 no longer preserves the exact final3 17/17/16 append"
         )
 
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL4_SOURCE_DATE_SHA256:
         issues.append("batch11-final4 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL4_SOURCE_DATE_ROWS:
         issues.append("batch11-final4 source-date ledger no longer has 294 data rows")
 
@@ -19307,10 +22061,10 @@ def batch11_final5_ledger_issues(
         if rows[:row_count] != disk_prefix:
             issues.append(f"{label} changed in the supplied in-memory state")
 
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL5_SOURCE_DATE_SHA256:
         issues.append("batch11-final5 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL5_SOURCE_DATE_ROWS:
         issues.append(
             "batch11-final5 source-date ledger no longer has 294 data rows"
@@ -20282,10 +23036,10 @@ def batch11_final6_ledger_issues(
         if rows[:row_count] != batch11_tsv_rows(path)[:row_count]:
             issues.append(f"{label} changed in the supplied in-memory state")
 
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL6_SOURCE_DATE_SHA256:
         issues.append("batch11-final6 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL6_SOURCE_DATE_ROWS:
         issues.append(
             "batch11-final6 source-date ledger no longer has 294 data rows"
@@ -21434,10 +24188,10 @@ def batch11_final7_ledger_issues(
         issues.append(
             "batch11-final7 final totals are not exactly 15996/7031/10063"
         )
-    source_date_payload = SOURCE_DATE_LEDGER_PATH.read_bytes()
+    source_date_payload = source_date_ledger_predecessor_bytes()
     if sha256_bytes(source_date_payload) != BATCH11_FINAL7_SOURCE_DATE_SHA256:
         issues.append("batch11-final7 changed frozen source-date-ledger bytes")
-    source_date_rows = load_source_date_ledger(require_file=True)[0]
+    source_date_rows = source_date_ledger_predecessor_rows()
     if len(source_date_rows) != BATCH11_FINAL7_SOURCE_DATE_ROWS:
         issues.append(
             "batch11-final7 source-date ledger no longer has 294 data rows"
@@ -23656,7 +26410,7 @@ def batch12_card_issues(
             issues.append("batch12 in-memory card delta changed")
     if fields != expected_fields:
         issues.append("batch12 card delta columns or order changed")
-    if len(rows) != EXPECTED_FILES * len(REPORT_CARD_FIELDS):
+    if len(rows) != POST_BATCH9_BASELINE_FILES * len(REPORT_CARD_FIELDS):
         issues.append("batch12 card delta is not 54 cards × 23 fields")
     text = (
         text_override
@@ -23664,6 +26418,7 @@ def batch12_card_issues(
         else (ROOT / "script.js").read_text(encoding="utf-8")
     )
     cards, parse_issues = extract_report_cards(text)
+    cards = batch14_baseline_card_view(cards)
     issues.extend(parse_issues)
     keyed = {
         (row.get("slug", ""), row.get("field", "")): row
@@ -23673,6 +26428,13 @@ def batch12_card_issues(
         issues.append("batch12 card delta has duplicate slug/field rows")
     for index, card in enumerate(cards, start=1):
         slug = card.get("slug", "")
+        if slug in BATCH14_NEW_SLUG_SET:
+            # The batch12 card delta records the card set as it stood at batch
+            # twelve and its bytes are frozen.  A dossier first published in
+            # batch fourteen cannot have a batch12 before/after row; it is
+            # covered by batch14_release_issues and by the batch14 source-ledger
+            # rows instead.  Every batch12 card keeps its full assertion below.
+            continue
         for field in REPORT_CARD_FIELDS:
             row = keyed.get((slug, field))
             if row is None:
@@ -24170,7 +26932,7 @@ def batch12_freeze_issues(
     # pre-batch13 bytes, which batch13_page_preimage_issues proves equal the
     # recorded sha256_before.  An explicit override still wins, so the
     # historical negative tests keep working.
-    overrides = {**batch13_historical_page_bytes(), **(overrides or {})}
+    overrides = {**batch14_historical_page_bytes(), **batch13_historical_page_bytes(), **(overrides or {})}
     optional_paths = set(BATCH12_OPTIONAL_AUTHENTICATED_FILES)
     paths = sorted(
         path.relative_to(ROOT).as_posix()
@@ -24188,6 +26950,14 @@ def batch12_freeze_issues(
             path.relative_to(ROOT).as_posix(),
             "tools/data/batch13-*.tsv",
         )
+        # A dossier or audit file first written in batch fourteen did not exist
+        # when this freeze was captured, so it cannot belong to its path set.
+        # batch14_release_issues and batch14_preimage_issues account for them.
+        and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
+        and not fnmatch.fnmatch(
+            path.relative_to(ROOT).as_posix(),
+            "tools/data/batch14-*.tsv",
+        )
     )
     issues: list[str] = []
     records: list[str] = []
@@ -24198,7 +26968,14 @@ def batch12_freeze_issues(
         elif isinstance(value, bytes):
             payload = value
         else:
-            payload = (ROOT / relative).read_bytes()
+            # batch13's rewind already runs on the batch14 preimage, so
+            # prefer it; batch14's own preimage covers the files batch13
+            # never touched.  Both leave the pre-batch-14 bytes here.
+            payload = (
+                batch13_historical_page_bytes().get(relative)
+                or batch14_historical_page_bytes().get(relative)
+                or (ROOT / relative).read_bytes()
+            )
         records.append(f"{relative}\t{sha256_bytes(payload)}\n")
     if len(paths) != BATCH12_PROTECTED_FILES:
         issues.append(
@@ -24584,7 +27361,11 @@ def batch12_browser_issues(
                 issues.append(f"{label}: repaired file is missing {relative}")
                 continue
             current = sha256_bytes(
+                # batch13's rewind already runs on the batch14 preimage, so it
+                # is the fully unwound text and must be preferred; batch14's
+                # own preimage only covers files batch13 never touched.
                 batch13_historical_page_bytes().get(relative)
+                or batch14_historical_page_bytes().get(relative)
                 or path.read_bytes()
             )
             if row.get("sha256_after") != current:
@@ -24865,6 +27646,9 @@ def article_shell_gate_issues(
             )
         elif sha256_bytes(
             batch13_historical_page_bytes().get(
+                BATCH12_ARTICLE_SHELL_FIX_FILE
+            )
+            or batch14_historical_page_bytes().get(
                 BATCH12_ARTICLE_SHELL_FIX_FILE
             )
             or repaired.read_bytes()
@@ -27182,6 +29966,7 @@ def source_ledger_issues(
 
     card_text = (ROOT / "script.js").read_text(encoding="utf-8")
     cards, card_load_issues = extract_report_cards(card_text)
+    cards = batch14_baseline_card_view(cards)
     issues.extend(card_load_issues)
     hk_card = next((card for card in cards if card.get("slug") == "hong-kong-nsl"), None)
     if hk_card is not None:
@@ -29314,6 +32099,7 @@ def validate_paths() -> list[str]:
     issues.extend(batch11_final7_release_issues())
     issues.extend(batch12_release_issues())
     issues.extend(batch13_release_issues())
+    issues.extend(batch14_release_issues())
     # Structural article-shell gate over all 54 dossiers.  It runs on the
     # default invocation and therefore also under --matrix and --release.
     issues.extend(article_shell_gate_issues())
@@ -30123,6 +32909,15 @@ def self_tests() -> tuple[int, int]:
         "mutations: "
         f"{sum(ok for _label, ok in batch13_checks)}/"
         f"{len(batch13_checks)} intercepted"
+    )
+
+    batch14_checks = batch14_named_negative_tests()
+    checks.extend(batch14_checks)
+    print(
+        "Batch-fourteen timeline-class/card-block/preimage/baseline-view/"
+        "release mutations: "
+        f"{sum(ok for _label, ok in batch14_checks)}/"
+        f"{len(batch14_checks)} intercepted"
     )
 
     article_shell_checks = article_shell_named_negative_tests()
@@ -33586,6 +36381,285 @@ BATCH13_MUTABLE_FILES = frozenset(
     }
 )
 BATCH13_SUCCESSOR_FILES = BATCH13_MUTABLE_FILES | BATCH13_NEW_AUDIT_FILES
+
+# ---------------------------------------------------------------------------
+# Batch fourteen: ten new overseas-protest dossiers.
+#
+# The batch changed already-frozen files in exactly three reversible ways, so
+# the pre-batch-14 bytes are reconstructed from the live bytes rather than
+# stored, and every reconstruction is proved against a captured digest:
+#   1. the style.css cache-busting token was advanced on every page,
+#   2. three older dossiers lost a stray ``timeline`` class that was drawing a
+#      centred vertical rule through their timeline list,
+#   3. style.css gained the header rule and script.js gained ten cards.
+# Nothing below weakens a predecessor assertion; each one is replayed against
+# the reconstructed preimage exactly as it was written.
+BATCH14_NEW_SLUGS = (
+    "zhang-yadi-tibet-advocacy",
+    "hu-yang-leiden-student",
+    "sydney-student-secession-case",
+    "yuen-ching-ting-japan-posts",
+    "fu-cha-gusa-publisher",
+    "yang-zewei-ban-gfw",
+    "luo-daiqing-twitter-case",
+    "jiang-yefei-thailand-deportation",
+    "dong-guangping-thailand-deportation",
+    "yiu-man-tin-morning-bell",
+)
+BATCH14_NEW_SLUG_SET = frozenset(BATCH14_NEW_SLUGS)
+BATCH14_NEW_FILENAMES = frozenset(f"{slug}.html" for slug in BATCH14_NEW_SLUGS)
+BATCH14_NEW_POST_FILES = frozenset(f"posts/{slug}.html" for slug in BATCH14_NEW_SLUGS)
+# In source order the ten new cards sit at positions 45-54, so batch-nine
+# baseline cards 1-44 keep their index and cards 45-54 move down by ten.
+# The insertion point is asserted separately, so the shift cannot hide a
+# reordering of the cards that were already there.
+BATCH14_CARD_OFFSET = len(BATCH14_NEW_SLUGS)
+BATCH14_CARD_INSERT_AT = 45
+
+
+def batch14_live_card_index(baseline_index: int) -> int:
+    """Zero-based live position of a batch-nine baseline card index."""
+    shift = BATCH14_CARD_OFFSET if baseline_index >= BATCH14_CARD_INSERT_AT else 0
+    return baseline_index + shift - 1
+BATCH14_STYLE_VERSION_AFTER = "?v=20260727-header-fix"
+BATCH14_STYLE_RULE = (
+    "\n.site-title h1 {\n"
+    "    font-size: clamp(1.05rem, 1.9vw, 1.8rem);\n"
+    "    line-height: 1.2;\n"
+    "    white-space: nowrap;\n"
+    "    margin: 0;\n"
+    "}\n"
+)
+BATCH14_PAGE_PREIMAGE_RELATIVE = "tools/data/batch14-page-preimage.tsv"
+SOURCE_DATE_LEDGER_RELATIVE = "tools/data/source-date-ledger.tsv"
+BATCH14_PAGE_PREIMAGE_PATH = ROOT / BATCH14_PAGE_PREIMAGE_RELATIVE
+BATCH14_PAGE_PREIMAGE_COLUMNS = (
+    "relative_path", "sha256_before", "sha256_after",
+    "style_version_before", "restores_timeline_class",
+)
+BATCH14_PAGE_PREIMAGE_ROWS = 66
+BATCH14_NEW_AUDIT_FILES = frozenset(
+    {BATCH14_PAGE_PREIMAGE_RELATIVE} | set(BATCH14_NEW_POST_FILES)
+)
+BATCH14_MUTABLE_FILES = frozenset(
+    {
+        "script.js",
+        "style.css",
+        "tools/check_languages.py",
+        "tools/audit_zero21_semantics.py",
+        "tools/data/zhonghuafreedom-fourth-pass-source-ledger.tsv",
+        "tools/data/semantic-reread-review.tsv",
+        "tools/data/editorial-semantic-contract.tsv",
+    }
+)
+BATCH14_SUCCESSOR_FILES = BATCH14_MUTABLE_FILES | BATCH14_NEW_AUDIT_FILES
+
+
+def batch14_preimage_text(
+    relative: str,
+    current: str,
+    style_version_before: str,
+    restores_timeline_class: bool,
+) -> str:
+    """Reverse the three batch-14 edits on one file."""
+    text = current
+    if relative == "style.css":
+        text = text.replace(BATCH14_STYLE_RULE, "", 1)
+    elif relative == "script.js":
+        text = "\n".join(
+            line for line in text.split("\n")
+            if not any(
+                f'url: "posts/{slug}.html"' in line for slug in BATCH14_NEW_SLUGS
+            )
+        )
+    if restores_timeline_class:
+        text = text.replace(
+            'class="timeline-list"', 'class="timeline timeline-list"'
+        )
+    return text.replace(
+        "style.css" + BATCH14_STYLE_VERSION_AFTER,
+        "style.css" + style_version_before,
+    )
+
+
+_BATCH14_HISTORICAL_PAGE_BYTES: dict[str, bytes] | None = None
+
+
+def batch14_historical_page_bytes() -> dict[str, bytes]:
+    """Pre-batch14 bytes keyed by repository-relative path.
+
+    A row is honoured only when the reconstruction reproduces the digest that
+    was captured before the edit; a file whose reconstruction fails is left out
+    so the historical freeze reports it rather than silently accepting it.
+    """
+    global _BATCH14_HISTORICAL_PAGE_BYTES
+    if _BATCH14_HISTORICAL_PAGE_BYTES is None:
+        payloads: dict[str, bytes] = {}
+        if BATCH14_PAGE_PREIMAGE_PATH.exists():
+            with BATCH14_PAGE_PREIMAGE_PATH.open(encoding="utf-8", newline="") as handle:
+                for row in csv.DictReader(handle, delimiter="\t"):
+                    relative = row.get("relative_path", "")
+                    path = ROOT / relative
+                    if not relative or not path.exists():
+                        continue
+                    rebuilt = batch14_preimage_text(
+                        relative,
+                        path.read_text(encoding="utf-8"),
+                        row.get("style_version_before", ""),
+                        row.get("restores_timeline_class", "") == "yes",
+                    ).encode("utf-8")
+                    if sha256_bytes(rebuilt) == row.get("sha256_before", ""):
+                        payloads[relative] = rebuilt
+        # Batch fourteen also appends to the source-date ledger, which batch
+        # thirteen protects.  Its pre-append bytes are the authenticated
+        # 294-row prefix, so the predecessor freeze still sees the file it
+        # froze; the append itself is checked by source_date_ledger_issues.
+        if SOURCE_DATE_LEDGER_PATH.exists():
+            lines = SOURCE_DATE_LEDGER_PATH.read_text(encoding="utf-8").split("\n")
+            prefix = "\n".join(
+                lines[:1 + BATCH12_SOURCE_DATE_BASE_ROWS]
+            ).encode("utf-8") + b"\n"
+            if sha256_bytes(prefix) == BATCH12_SOURCE_DATE_BASE_SHA256:
+                payloads[SOURCE_DATE_LEDGER_RELATIVE] = prefix
+        _BATCH14_HISTORICAL_PAGE_BYTES = payloads
+    return _BATCH14_HISTORICAL_PAGE_BYTES
+
+
+def batch14_historical_article_bytes() -> dict[str, bytes]:
+    """The same preimage keyed by bare article filename, for the frozen-article gate."""
+    return {
+        relative.split("/")[-1]: payload
+        for relative, payload in batch14_historical_page_bytes().items()
+        if relative.startswith("posts/")
+    }
+
+
+def batch14_preimage_issues() -> list[str]:
+    """The preimage manifest must stay complete, well formed, and honest."""
+    issues: list[str] = []
+    if not BATCH14_PAGE_PREIMAGE_PATH.exists():
+        return [f"batch14 page preimage is missing: {BATCH14_PAGE_PREIMAGE_RELATIVE}"]
+    with BATCH14_PAGE_PREIMAGE_PATH.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if tuple(reader.fieldnames or ()) != BATCH14_PAGE_PREIMAGE_COLUMNS:
+            return ["batch14 page preimage column order changed"]
+        rows = list(reader)
+    if len(rows) != BATCH14_PAGE_PREIMAGE_ROWS:
+        issues.append(
+            f"batch14 page preimage has {len(rows)} rows, "
+            f"expected {BATCH14_PAGE_PREIMAGE_ROWS}"
+        )
+    seen: set[str] = set()
+    for row in rows:
+        relative = row.get("relative_path", "")
+        if not relative or relative in seen:
+            issues.append(f"batch14 page preimage has a blank or duplicate path: {relative!r}")
+            continue
+        seen.add(relative)
+        for column in ("sha256_before", "sha256_after"):
+            if not re.fullmatch(r"[0-9a-f]{64}", row.get(column, "")):
+                issues.append(f"batch14 page preimage has an invalid {column} for {relative}")
+        if row.get("restores_timeline_class", "") not in {"yes", "no"}:
+            issues.append(f"batch14 page preimage has a non-boolean timeline flag for {relative}")
+        path = ROOT / relative
+        if not path.exists():
+            issues.append(f"batch14 page preimage names a missing file: {relative}")
+            continue
+        if sha256_bytes(path.read_bytes()) != row.get("sha256_after", ""):
+            issues.append(f"batch14 preimage sha256_after no longer matches the live file: {relative}")
+        rebuilt = batch14_preimage_text(
+            relative,
+            path.read_text(encoding="utf-8"),
+            row.get("style_version_before", ""),
+            row.get("restores_timeline_class", "") == "yes",
+        ).encode("utf-8")
+        if sha256_bytes(rebuilt) != row.get("sha256_before", ""):
+            issues.append(f"batch14 preimage does not reconstruct sha256_before: {relative}")
+    return issues
+
+
+def batch14_card_head_issues(
+    text_override: str | None = None,
+) -> list[str]:
+    """The ten batch-14 cards must sit in one ordered block, at a fixed index.
+
+    Every batch-nine card assertion is replayed at BATCH14_CARD_OFFSET, so the
+    offset itself has to be proved rather than assumed.
+    """
+    text = (
+        text_override if text_override is not None
+        else (ROOT / "script.js").read_text(encoding="utf-8")
+    )
+    cards, issues = extract_report_cards(text)
+    start = BATCH14_CARD_INSERT_AT - 1
+    block = tuple(
+        card.get("slug", "")
+        for card in cards[start:start + BATCH14_CARD_OFFSET]
+    )
+    if block != BATCH14_NEW_SLUGS:
+        issues.append(
+            "script.js: the ten batch14 cards are not a contiguous ordered block "
+            f"at position {BATCH14_CARD_INSERT_AT}"
+        )
+    elsewhere = {
+        card.get("slug", "") for index, card in enumerate(cards)
+        if not start <= index < start + BATCH14_CARD_OFFSET
+    } & BATCH14_NEW_SLUG_SET
+    if elsewhere:
+        issues.append(
+            "script.js: a batch14 card is duplicated outside its block: "
+            + ", ".join(sorted(elsewhere))
+        )
+    return issues
+
+
+def batch14_release_issues() -> list[str]:
+    """Everything batch fourteen is accountable for, in one gate."""
+    issues: list[str] = []
+    issues.extend(batch14_preimage_issues())
+    issues.extend(batch14_card_head_issues())
+
+    missing = sorted(
+        relative for relative in BATCH14_NEW_POST_FILES
+        if not (ROOT / relative).is_file()
+    )
+    for relative in missing:
+        issues.append(f"batch14 dossier is missing: {relative}")
+
+    # Every new dossier must be reachable from the report list and must carry a
+    # reviewed visible-timeline contract; a page nobody links to and nobody
+    # reviewed is not published work.
+    cards, card_issues = extract_report_cards(
+        (ROOT / "script.js").read_text(encoding="utf-8")
+    )
+    issues.extend(card_issues)
+    carded = {card.get("slug", "") for card in cards}
+    for slug in BATCH14_NEW_SLUGS:
+        if slug not in carded:
+            issues.append(f"batch14 dossier has no report card: {slug}")
+
+    contracts = load_dynamic_timeline_contracts()
+    for slug in BATCH14_NEW_SLUGS:
+        for lang in LANGS:
+            if not any(
+                key[0] == slug and key[1] == lang for key in contracts
+            ):
+                issues.append(
+                    f"batch14 dossier lacks a reviewed timeline contract: {slug}/{lang}"
+                )
+                break
+
+    # The stray decorative timeline class must never come back: it renders a
+    # centred vertical rule straight through the dossier timeline.
+    for relative in sorted(BATCH14_NEW_POST_FILES):
+        path = ROOT / relative
+        if path.is_file() and 'class="timeline timeline-list"' in path.read_text(
+            encoding="utf-8"
+        ):
+            issues.append(
+                f"batch14 dossier carries the decorative timeline class: {relative}"
+            )
+    return issues
 # The batch13 freeze is strictly wider than the batch12 one: script.js,
 # tools/audit_source_dates.py, tools/data/source-date-ledger.tsv and the twelve
 # batch12 dossiers were mutable for batch12 and are protected again here.
@@ -33727,7 +36801,20 @@ def batch13_reread_append(
 
 
 def batch13_live_page_text(slug: str) -> str:
-    """Read the live dossier.  Deliberately not the historical projection."""
+    """The dossier as it stood at the end of batch thirteen.
+
+    Batch thirteen's preimage is defined against its own successor state, not
+    against whatever the newest batch has since written.  Batch fourteen
+    advanced the style.css token on every page and removed a stray timeline
+    class from three of them, so those edits are rewound first; batch
+    thirteen's own rewind then runs on the text it was authenticated against
+    and still reproduces its recorded sha256_before.  When no batch-14 preimage
+    covers the file this is the live text, exactly as before.
+    """
+    relative = f"posts/{slug}.html"
+    payload = batch14_historical_page_bytes().get(relative)
+    if payload is not None:
+        return payload.decode("utf-8")
     return (POSTS / f"{slug}.html").read_bytes().decode("utf-8")
 
 
@@ -34092,7 +37179,19 @@ def batch13_ledger_issues(
         ),
         (SOURCE_LEDGER_PATH, BATCH13_SOURCE_FULL_SHA256, "batch13 full source ledger"),
     ):
-        if not path.exists() or sha256_bytes(path.read_bytes()) != digest:
+        if not path.exists():
+            issues.append(f"{label} bytes changed")
+            continue
+        payload = path.read_bytes()
+        if path == SOURCE_LEDGER_PATH and sha256_bytes(payload) != digest:
+            # Batch fourteen appends rows for its ten new dossiers after batch
+            # thirteen's final state.  Replay this digest against that state's
+            # prefix; anything else still fires.
+            lines = payload.decode("utf-8").split("\n")
+            payload = "\n".join(
+                lines[:1 + BATCH13_SOURCE_ROWS]
+            ).encode("utf-8") + b"\n"
+        if sha256_bytes(payload) != digest:
             issues.append(f"{label} bytes changed")
     reread_rows = (
         reread_rows_override
@@ -34109,6 +37208,23 @@ def batch13_ledger_issues(
         if source_rows_override is not None
         else batch13_tsv_rows(SOURCE_LEDGER_PATH)
     )
+    # Batch fourteen appends 1,750 source-ledger rows for its ten new dossiers
+    # after batch thirteen's 11,076-row final state.  Every batch13 assertion
+    # below is replayed against that final state.  The appended rows must all
+    # belong to a batch14 dossier, so the append cannot be used to slip a change
+    # into a node batch thirteen froze.
+    if len(source_rows) > BATCH13_SOURCE_ROWS:
+        stray = sorted({
+            row.get("slug", "")
+            for row in source_rows[BATCH13_SOURCE_ROWS:]
+            if row.get("slug", "") not in BATCH14_NEW_SLUG_SET
+        })
+        if stray:
+            issues.append(
+                "batch13 source ledger gained rows outside batch14: "
+                + ", ".join(stray)
+            )
+        source_rows = source_rows[:BATCH13_SOURCE_ROWS]
     for rows, digest, label in (
         (reread_rows, BATCH13_REREAD_ROWS_SHA256, "reread"),
         (contract_rows, BATCH13_CONTRACT_ROWS_SHA256, "contract"),
@@ -34443,6 +37559,14 @@ def batch13_freeze_issues(
             path.relative_to(ROOT).as_posix(),
             "tools/data/batch13-*.tsv",
         )
+        # A dossier or audit file first written in batch fourteen did not exist
+        # when this freeze was captured, so it cannot belong to its path set.
+        # batch14_release_issues and batch14_preimage_issues account for them.
+        and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
+        and not fnmatch.fnmatch(
+            path.relative_to(ROOT).as_posix(),
+            "tools/data/batch14-*.tsv",
+        )
     )
     issues: list[str] = []
     records: list[str] = []
@@ -34453,7 +37577,14 @@ def batch13_freeze_issues(
         elif isinstance(value, bytes):
             payload = value
         else:
-            payload = (ROOT / relative).read_bytes()
+            # batch13's rewind already runs on the batch14 preimage, so
+            # prefer it; batch14's own preimage covers the files batch13
+            # never touched.  Both leave the pre-batch-14 bytes here.
+            payload = (
+                batch13_historical_page_bytes().get(relative)
+                or batch14_historical_page_bytes().get(relative)
+                or (ROOT / relative).read_bytes()
+            )
         records.append(f"{relative}\t{sha256_bytes(payload)}\n")
     if len(paths) != BATCH13_PROTECTED_FILES:
         issues.append(
@@ -34555,6 +37686,178 @@ def batch13_release_issues(
     issues.extend(batch13_freeze_issues(freeze_overrides))
     issues.extend(batch13_wiring_issues(checker_source_override))
     return issues
+
+
+def batch14_named_negative_tests() -> list[tuple[str, bool]]:
+    """Real mutations of every batch-14 gate, plus two must-not-fire reverse tests.
+
+    Each case mutates live text or a manifest row in memory and asserts the new
+    gate reports it.  A gate that cannot be made to fire is not a gate.
+    """
+    checks: list[tuple[str, bool]] = []
+    script = (ROOT / "script.js").read_text(encoding="utf-8")
+    sample = f"posts/{BATCH14_NEW_SLUGS[0]}.html"
+
+    # -- the decorative timeline class must never come back -------------------
+    def carries_stray_class(markup: str) -> bool:
+        return 'class="timeline timeline-list"' in markup
+
+    live = (ROOT / sample).read_text(encoding="utf-8")
+    checks.append((
+        "01 batch14 dossier still free of the decorative timeline class",
+        not carries_stray_class(live),
+    ))
+    checks.append((
+        "02 batch14 decorative timeline class would be detected if reintroduced",
+        carries_stray_class(
+            live.replace('class="timeline-list"', 'class="timeline timeline-list"', 1)
+        ),
+    ))
+
+    # -- the ten cards must stay one ordered block ----------------------------
+    cards, _ = extract_report_cards(script)
+    checks.append((
+        "03 batch14 card block is where the offset expects it",
+        not batch14_card_head_issues(text_override=script),
+    ))
+    moved = script.replace(
+        f'url: "posts/{BATCH14_NEW_SLUGS[0]}.html"',
+        f'url: "posts/{BATCH14_NEW_SLUGS[0]}-moved.html"',
+        1,
+    )
+    checks.append((
+        "04 batch14 card block detects a reordered or renamed card",
+        any(
+            "batch14 cards are not a contiguous ordered block" in issue
+            for issue in batch14_card_head_issues(text_override=moved)
+        ),
+    ))
+
+    # -- the preimage must actually reconstruct -------------------------------
+    checks.append((
+        "05 batch14 preimage reconstructs every captured digest",
+        not batch14_preimage_issues(),
+    ))
+    payloads = batch14_historical_page_bytes()
+    with BATCH14_PAGE_PREIMAGE_PATH.open(encoding="utf-8", newline="") as handle:
+        manifest_paths = [
+            row["relative_path"] for row in csv.DictReader(handle, delimiter="\t")
+        ]
+    checks.append((
+        "06 batch14 preimage covers every file its manifest claims",
+        len(manifest_paths) == BATCH14_PAGE_PREIMAGE_ROWS
+        and all(relative in payloads for relative in manifest_paths)
+        # plus the appended source-date ledger, whose preimage is its
+        # authenticated 294-row prefix rather than a manifest row
+        and SOURCE_DATE_LEDGER_RELATIVE in payloads,
+    ))
+    tampered = batch14_preimage_text(
+        "style.css",
+        (ROOT / "style.css").read_text(encoding="utf-8") + "\n/* stray rule */\n",
+        "",
+        False,
+    )
+    checks.append((
+        "07 batch14 preimage rejects a style.css edit outside the header rule",
+        sha256_bytes(tampered.encode("utf-8")) != sha256_bytes(
+            batch14_historical_page_bytes().get("style.css", b"")
+        ),
+    ))
+
+    # -- the baseline card view must not hide a missing dossier ---------------
+    view = batch14_baseline_card_view(cards)
+    checks.append((
+        "08 batch14 baseline card view restores exactly the 54-card sequence",
+        len(view) == POST_BATCH9_BASELINE_FILES
+        and not (
+            {card.get("slug", "") for card in view} & BATCH14_NEW_SLUG_SET
+        ),
+    ))
+    dropped = [
+        card for card in cards
+        if card.get("slug", "") != BATCH14_NEW_SLUGS[3]
+    ]
+    checks.append((
+        "09 batch14 baseline card view still shrinks when a batch14 card vanishes",
+        len(batch14_baseline_card_view(dropped)) == POST_BATCH9_BASELINE_FILES
+        and any(
+            "batch14 cards are not a contiguous ordered block" in issue
+            for issue in batch14_card_head_issues(
+                text_override=script.replace(
+                    f'url: "posts/{BATCH14_NEW_SLUGS[3]}.html"',
+                    'url: "posts/not-a-batch14-card.html"',
+                    1,
+                )
+            )
+        ),
+    ))
+
+    # -- the batch11 protected-card digest, repaired in this batch ------------
+    # It had been reporting a change since batch twelve rebuilt five cards
+    # without extending it.  The repair replays the digest against the state it
+    # was captured from, so it must now be clean AND must still fire on a real
+    # edit to any of the 1,162 fields it protects.
+    checks.append((
+        "12 batch11 protected-card digest is clean after the batch12 replay",
+        not any(
+            "non-authorized report-card field" in issue
+            for issue in batch11_card_issues(script_override=script)
+        ),
+    ))
+    field_match = re.search(r'(title_zh: ")([^"]{10,60})', script)
+    tampered = (
+        script[:field_match.start(2)] + "TAMPERED" + script[field_match.end(2):]
+        if field_match else script
+    )
+    checks.append((
+        "13 batch11 protected-card digest still fires on a protected-field edit",
+        any(
+            "non-authorized report-card field" in issue
+            for issue in batch11_card_issues(script_override=tampered)
+        ),
+    ))
+    replayed = batch11_predecessor_cards(batch14_baseline_card_view(cards))
+    live_by_slug = {c.get("slug", ""): c for c in batch14_baseline_card_view(cards)}
+    rewound = {
+        c.get("slug", "") for c in replayed
+        if any(
+            c.get(f, "") != live_by_slug[c.get("slug", "")].get(f, "")
+            for f in REPORT_CARD_FIELDS
+        )
+    }
+    checks.append((
+        "14 batch11 replay rewinds only the five batch12 card slugs",
+        bool(rewound) and rewound <= set(BATCH12_CARD_SLUGS),
+    ))
+
+    # -- the release gate must notice a missing dossier or contract -----------
+    release = batch14_release_issues()
+    checks.append((
+        "10 batch14 release gate is clean on the live tree",
+        not release,
+    ))
+    contracts = load_dynamic_timeline_contracts()
+    thinned = {
+        key: row for key, row in contracts.items()
+        if not (key[0] == BATCH14_NEW_SLUGS[5] and key[1] == "de")
+    }
+    checks.append((
+        "11 batch14 timeline contract loss is intercepted",
+        any(
+            "lacks a reviewed dynamic visible-timeline contract" in issue
+            for issue in dynamic_timeline_contract_issues(
+                BeautifulSoup(
+                    (ROOT / f"posts/{BATCH14_NEW_SLUGS[5]}.html").read_text(
+                        encoding="utf-8"
+                    ),
+                    "html.parser",
+                ),
+                POSTS / f"{BATCH14_NEW_SLUGS[5]}.html",
+                contracts=thinned,
+            )
+        ),
+    ))
+    return checks
 
 
 def batch13_named_negative_tests() -> list[tuple[str, bool]]:
@@ -34853,7 +38156,7 @@ def main() -> int:
         f"latest chain tips match ({BATCH9_LIVE_TARGETS} required)."
     )
     print(
-        f"Batch-ten live card delta: {EXPECTED_FILES} × {len(REPORT_CARD_FIELDS)} fields; "
+        f"Batch-ten live card delta: {POST_BATCH9_BASELINE_FILES} × {len(REPORT_CARD_FIELDS)} fields; "
         f"target-field changes={target_card_changes}; non-target-field changes={non_target_card_changes}."
     )
     print(f"Human-rights main paragraphs: {stats['rights']}; protection main paragraphs: {stats['protection']}; additional critical nodes: {stats['extra']}")
