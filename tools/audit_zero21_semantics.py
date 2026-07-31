@@ -5143,8 +5143,14 @@ def batch9_final2_freeze_issues():
             BATCH9_FINAL2_MUTABLE_FILES | BATCH10_ALLOWED_FILES
             | BATCH11_ALLOWED_FILES
         )
+        # Finder metadata, never project content; macOS rewrites it on any
+        # directory access, so pinning its bytes made an unrelated desktop
+        # action fail the release checks.  Batch fourteen untracks it.
+        and path.name != ".DS_Store"
     }
-    expected_paths = set(expected) - BATCH10_ALLOWED_FILES - BATCH11_ALLOWED_FILES
+    expected_paths = (
+        set(expected) - BATCH10_ALLOWED_FILES - BATCH11_ALLOWED_FILES - {".DS_Store"}
+    )
     if (ROOT / ".git").exists():
         for relative in sorted(expected_paths - actual):
             issues.append(f"final2 frozen file missing: {relative}")

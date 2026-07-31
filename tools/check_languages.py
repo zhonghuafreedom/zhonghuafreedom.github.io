@@ -10995,6 +10995,12 @@ def final1_freeze_issues(
         and path.relative_to(ROOT).as_posix() not in BATCH12_SUCCESSOR_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH13_NEW_AUDIT_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
+        # Finder metadata, never project content.  macOS rewrites it whenever
+        # the directory is opened, so pinning its bytes made an unrelated
+        # desktop action fail the release checks.  Thirteen other gates in this
+        # file already skip it by name; these two now do the same, and batch
+        # fourteen untracks it so it can no longer ship.
+        and path.name != ".DS_Store"
     }
     expected_paths = (
         set(expected)
@@ -11003,6 +11009,7 @@ def final1_freeze_issues(
         - BATCH12_SUCCESSOR_FILES
         - BATCH13_NEW_AUDIT_FILES
         - BATCH14_NEW_AUDIT_FILES
+        - {".DS_Store"}
     )
     if (ROOT / ".git").exists():
         for relative in sorted(expected_paths - actual_paths):
@@ -11063,6 +11070,12 @@ def final2_freeze_issues(
         and path.relative_to(ROOT).as_posix() not in BATCH12_SUCCESSOR_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH13_NEW_AUDIT_FILES
         and path.relative_to(ROOT).as_posix() not in BATCH14_NEW_AUDIT_FILES
+        # Finder metadata, never project content.  macOS rewrites it whenever
+        # the directory is opened, so pinning its bytes made an unrelated
+        # desktop action fail the release checks.  Thirteen other gates in this
+        # file already skip it by name; these two now do the same, and batch
+        # fourteen untracks it so it can no longer ship.
+        and path.name != ".DS_Store"
     }
     expected_paths = (
         set(expected)
@@ -11071,6 +11084,7 @@ def final2_freeze_issues(
         - BATCH12_SUCCESSOR_FILES
         - BATCH13_NEW_AUDIT_FILES
         - BATCH14_NEW_AUDIT_FILES
+        - {".DS_Store"}
     )
     if (ROOT / ".git").exists():
         for relative in sorted(expected_paths - actual_paths):
@@ -37828,6 +37842,27 @@ def batch14_named_negative_tests() -> list[tuple[str, bool]]:
     checks.append((
         "14 batch11 replay rewinds only the five batch12 card slugs",
         bool(rewound) and rewound <= set(BATCH12_CARD_SLUGS),
+    ))
+
+    # -- Finder metadata must not be able to fail a release -------------------
+    checks.append((
+        "15 macOS rewriting .DS_Store no longer fails the frozen-file gates",
+        not any(
+            ".DS_Store" in issue
+            for issue in final1_freeze_issues(overrides={".DS_Store": b"rewritten"})
+            + final2_freeze_issues(overrides={".DS_Store": b"rewritten"})
+        ),
+    ))
+    checks.append((
+        "16 the frozen-file gates still fire on a real protected file",
+        any(
+            "frozen file changed" in issue
+            for issue in final1_freeze_issues(overrides={".gitignore": b"tampered"})
+        )
+        and any(
+            "frozen file changed" in issue
+            for issue in final2_freeze_issues(overrides={".gitignore": b"tampered"})
+        ),
     ))
 
     # -- the release gate must notice a missing dossier or contract -----------
